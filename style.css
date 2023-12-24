@@ -124,19 +124,18 @@ button:hover {
 .movie-list-container{
     padding: 0 20px;
 }
- .movie-list{
+.movie-list{
     display: flex;
     align-items: center;
     height: 300px;
-
- }
- .movie-list-item{
+}
+.movie-list-item{
     margin-right: 30px;
 
- }
- .movie-list-item:hover .movie-list-item-img{
+}
+.movie-list-item:hover .movie-list-item-img{
     transform: scale(1,2);
- }
+}
 
 .movie-list-wrapper{
     position: relative;
@@ -146,6 +145,7 @@ button:hover {
 .movie-list-item{
     margin-right: 30px;
     position: relative;
+    transition:all 1s ease-in-out;
 }
 
 .movie-list-item:hover .movie-list-item-img{
@@ -207,4 +207,13 @@ button:hover {
     left: 50px;
     opacity: 0;
     transition: 1s all ease-in-out;
+}
+.arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
 }

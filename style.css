@@ -124,6 +124,19 @@ button:hover {
 .movie-list-container{
     padding: 0 20px;
 }
+ .movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+
+ }
+ .movie-list-item{
+    margin-right: 30px;
+
+ }
+ .movie-list-item:hover .movie-list-item-img{
+    transform: scale(1,2);
+ }
 
 .movie-list-wrapper{
     position: relative;

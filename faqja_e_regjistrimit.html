@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faqja e regjistrimit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;1,6..12,400&family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap');
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background-color: rgb(201, 166, 234);
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            font: size 0.8rem;
+            font-weight: 700;
+        }
+
+        .btn i {
+            vertical-align: text-top;
+        }
+
+        .btn-outline-custom {
+            color: #31374a;
+            border-color: #ddd;
+        }
+
+        .btn-outline-custom:hover {
+            color: #31374a;
+            border-color: #ddd;
+            background-color: rgb(201, 166, 234);
+        }
+
+        .bg-holder {
+            position: absolute;
+            width: 100%;
+            height: 100%; 
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .divider-content-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            background-color: rgb(201, 166, 234);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #999;
+        }
+
+        .divider {
+            margin: 2rem 0;
+        }
+        
+        
+        .btn-lg {
+            padding: 12px 20px;
+            font-size: 1rem;
+            background-color: rgb(201, 166, 234);
+            border-color: #999;
+            color: #fff; 
+        }
+
+       
+        .btn-primary {
+            background-color: rgb(162, 101, 220);
+            border-color: rgb(162, 101, 220);
+        }
+
+        
+        .text-secondary a {
+            color: rgb(162, 101, 220);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row vh-100 g-0">
+            <!-- Ana e majte -->
+            <div class="col-lg-6 position-relative">
+                <div class="bg-holder" style="background-image: url('C:/Users/Pc/Desktop/movies-site/img/img6.jpg');"></div>
+            </div>
+            <!-- /Ana e majte -->
+
+            <!-- Ana e djathte -->
+            <div class="col-lg-6">
+                <div class="row align-items-center justify-content-center h-100 g-0 px-4 px-sm-0">
+                    <div class="col-12 col-sm-6 col-lg-7 col-xl-6">
+                        <div class="text-center mb-5">
+                            <h3 class="fw-bold">Qasja</h3>
+                            <p class="text-secondary">Hyni ne llogarine tuaj</p>
+                        </div>
+                        <button class="btn btn-lg btn-outline-custom  w-100 mb-3"><i class='bx bxl-google text-danger me-1 fs-6'></i> Qasja me Google</button>
+                        <button class="btn btn-lg btn-outline-custom w-100 mb-3"> <i class='bx bxl-facebook text-primary me-1 fs-6' ></i>Qasja me Facebook</button>
+
+                        <div class="position-relative">
+                            <hr class="text-secondary divider">
+                            <div class="divider-content-center">ose</div>
+                        </div>
+
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class="bx bx-user"></i>
+                                </span>
+                                <input type="text" class="form-control form-control-lg fs-6" placeholder="Emri i perdoruesit:">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class="bx bx-lock-alt"></i>
+                                </span>
+                                <input type="password" class="form-control form-control-lg fs-6" placeholder="Fjalekalimi:">
+                            </div>
+                            <div class="input-group mb-3 d-flex justify-content-between">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="formCheck">
+                                    <label for="formCheck" class="form-check-label text-secondary"><small>Ruaj</small></label>
+                                </div>
+                                <div>
+                                    <small><a href="#" style="color: rgb(162, 101, 220);">Keni harruar fjalekalimin?</a></small>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-lg w-100 mb-3">Qasja</button>
+                        </form>
+
+                        <div class="text-center">
+                            <small>Nuk keni nje llogari? <a href="#" class="fw-bold" style="color: rgb(162, 101, 220);">Regjistrohu</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Ana e djathte -->
+        </div>
+    </div>
+</body>
+</html>

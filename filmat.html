@@ -7,6 +7,201 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            position: relative;
+            top: 0;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            height: 100%;
+            color: white;
+            font-family: 'Sen', sans-serif;
+        }
+
+        .logo-container {
+            flex: 1;
+        }
+
+        .logo {
+            font-size: 30px;
+            color: rgb(162, 101, 220);
+        }
+
+        .menu-container {
+            flex: 6;
+        }
+
+        .menu-list {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .menu-list-item {
+            margin-right: 30px;
+        }
+
+        .menu-list-item.fkryesore {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(162, 101, 220);
+            color: white;
+            border: 2px solid rgb(162, 101, 220);
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(162, 101, 220);
+        }
+
+        .container {
+            width: 95%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 200px;
+            height: 250px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 3px;
+            position: relative;
+            background: #444;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            text-align: left;
+            opacity: 0;
+            transition: 0.3s;
+            background-color:rgb(44, 41, 41);
+
+        }
+
+        .card:hover .details {
+            opacity: 1;
+        }
+
+        .details h3 {
+            font-size: 16px;
+            margin: 0 0 5px;
+        }
+
+        .details p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .play-icon {
+            font-size: 24px;
+            color: #ffd500;
+            cursor: pointer;
+        }
+        .series-list-container{
+            width: 95%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px; 
+            margin-right: 50px;
+            margin-left: 250px;
+        }
+        
+        .series-list-wrapper{
+            position: relative;
+            overflow: hidden;
+        }
+        .series-list{
+            margin-right: 10px;
+            position: relative;
+            transition:all 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            height: 300px;
+        }
+        .series-list-title{
+            margin-right: 900px;
+            color:whitesmoke;
+            font-size: 25px;
+            font-weight: inherit;
+            top: 10%;
+            left: 50px; 
+        }
+        .arrow{
+           background-color: antiquewhite;
+           height: 50px;
+           width: 50px; 
+           border-radius: 50%;
+           margin: 15px;
+           transition: 0.4s ease;
+        }
+        .arrow i{
+            position:absolute;
+            height: 20px;
+            width: 20px;
+            border-top:8px solid #282c34;
+            border-left: 8px solid black;
+            transform: rotate(45deg);
+            left: 27.5px;
+            top:35px;
+        }
+        .arrow-right{
+            transform: rotate(90deg);
+        }
+        .arrow-left{
+            transform: rotate(-90deg);
+        }
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            margin-right: 900px;
+        }
+
+        
+        
+            
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -42,226 +237,414 @@
         </div>
     </div>
     <div class="container">
-        <div class="content-container" >
-        <div class="content-container">
-            <div class="movie-list-container">
-                <h1 class="movie-list-title" id="animuar">Animuar</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f1.jpg" alt="">
-                            <span class="movie-list-item-title">Trolls</span>
-                            <p class="movie-list-item-desc">Animuar</p>
-                            <a href="https://www.youtube.com/watch?v=ftUpFjGKuY0" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f2.jpg" alt="">
-                            <span class="movie-list-item-title">Leo </span>
-                            <p class="movie-list-item-desc">Animuar</p>
-                            <a href="https://www.youtube.com/watch?v=G_AEL-Xo5l8&pp=ygUIbGVvIDIwMjM%3D" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f3.jpg" alt="">
-                            <span class="movie-list-item-title">Spiderman</span>
-                            <p class="movie-list-item-desc">Animuar</p>
-                            <a href=""> <button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/f4.jpg" alt="">
-                           <span class="movie-list-item-title">Padington</span>
-                           <p class="movie-list-item-desc">Animuar</p>
-                           <button class="movie-list-item-button">Watch</button>
-                        </div>
-                    </div>
-                </div>  
-            </div> 
-            <div class="movie-list-container">
-                <h1 class="movie-list-title" id="fantazi">Fantazi</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f5.jpg" alt="">
-                            <span class="movie-list-item-title">The Shepherd</span>
-                            <p class="movie-list-item-desc">Fantazi</p>
-                            <a href="https://www.youtube.com/watch?v=8Qn_spdM5Zg" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f6.avif" alt="">
-                            <span class="movie-list-item-title">Barbie</span>
-                            <p class="movie-list-item-desc">Fantazi </p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f7.jpg" alt="">
-                            <span class="movie-list-item-title">Mona Lisa</span>
-                            <p class="movie-list-item-desc">Fantazi</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/f8.jpg" alt="">
-                           <span class="movie-list-item-title">Abulele</span>
-                           <p class="movie-list-item-desc">Fantazi</p>
-                           <button class="movie-list-item-button">Watch</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="movie-list-container">
+            <h1 class="movie-list-title" id="animuar"></h1>
+            <div class="movie-list-wrapper">
+                <div class="movie-list">
+        <div class="card">
+            <img src="img/a2.webp">
+            <div class="details">
+                <h3>Trolls Band Together </h3>
+                <p>HD | 2023</p>
+                <p>Animuar</p>
+                <p>Rating: 6.0 </p>
+                <a href="https://www.youtube.com/watch?v=ftUpFjGKuY0" target="_blank"><i class="fas fa-play play-icon"></i></a> 
             </div>
-            <div class="movie-list-container">
-                <h1 class="movie-list-title" id="aventure" >AVENTURE</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                            <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                            <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                            <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                            <span class="movie-list-item-title">Maleficent</span>
-                            <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                            <span class="movie-list-item-title">Harry Potter</span>
-                            <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                           <span class="movie-list-item-title">John Wick</span>
-                           <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                           <button class="movie-list-item-button">Watch</button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <div class="card">
+            <img src="img/a3.jpg">
+            <div class="details">
+                <h3>PAW Patrol</h3>
+                <p>HD | 2023</p>
+                <p>Animuar</p>
+                <p>Rating: 6.0 </p>
+                <a href="https://www.youtube.com/watch?v=UDgjJ9XzgHk" target="_blank"><i class="fas fa-play play-icon"></i></a>
             </div>
-            <div class="movie-list-container">
-                <h1 class="movie-list-title" id="aksion">AKSION</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/32.webp" alt="">
-                            <span class="movie-list-item-title">La Casa De Papel</span>
-                            <p class="movie-list-item-desc">Sezoni 5</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/33.jpg" alt="">
-                            <span class="movie-list-item-title">Who is Erin?</span>
-                            <p class="movie-list-item-desc">Sezoni 1</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/36.jpg" alt="">
-                            <span class="movie-list-item-title">Wednesday</span>
-                            <p class="movie-list-item-desc">Sezoni 1</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/upload.jpg" alt="">
-                           <span class="movie-list-item-title">Upload</span>
-                           <p class="movie-list-item-desc">Sezoni 2</p>
-                           <button class="movie-list-item-button">Watch</button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <div class="card">
+            <img src="img/a38.jpg">
+            <div class="details">
+                <h3>Alpha and Omega</h3>
+                <p>HD | 2010</p>
+                <p>Animuar</p>
+                <p>Rating: 5.1 </p>
+                 <a href="https://youtu.be/F6hpN2t7_lc" target="_blank"><i class="fas fa-play play-icon"></i></a>
             </div>
-            <div class="movie-list-container">
-                 <h1 class="movie-list-title" id="mister" >MISTER</h1>
-                 <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                             <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                             <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                             <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                             <span class="movie-list-item-title">Maleficent</span>
-                             <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                             <span class="movie-list-item-title">Harry Potter</span>
-                             <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                             <span class="movie-list-item-title">John Wick</span>
-                             <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                     </div>
-                </div>
+        </div>
+        <div class="card">
+            <img src="img/a5.jpg">
+            <div class="details">
+                <h3>Spider-man</h3>
+                <p>HD | 2023</p>
+                <p>Animuar</p>
+                <p>Rating: 8.9 </p>
+                <a href="https://www.youtube.com/watch?v=cqGjhVJWtEg" target="_blank"><i class="fas fa-play play-icon"></i></a> 
             </div>
-            <div class="movie-list-container">
-                 <h1 class="movie-list-title" id="komedi" >KOMEDI</h1>
-                 <div class="movie-list-wrapper">
-                     <div class="movie-list">
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                            <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                            <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                            <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                         </div>
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                            <span class="movie-list-item-title">Maleficent</span>
-                            <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                            <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                            <span class="movie-list-item-title">Harry Potter</span>
-                            <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                            <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                            <span class="movie-list-item-title">John Wick</span>
-                            <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                            <button class="movie-list-item-button">Watch</button>
-                         </div>
-                    </div>
-                </div>
+        </div>
+
+        <div class="card">
+            <img src="img/a6.jpg">
+            <div class="details">
+                <h3>Leo</h3>
+                <p>HD | 2023</p>
+                <p>Animuar</p>
+                <p>Rating: 7.0 </p>
+                <a href="https://www.youtube.com/watch?v=G_AEL-Xo5l8" target="_blank"> <i class="fas fa-play play-icon"></i></a>
             </div>
-            <div class="movie-list-container">
-                <h1 class="movie-list-title" id="sport" >SPORT</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                             <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                             <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                             <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                             <span class="movie-list-item-title">Maleficent</span>
-                             <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                             <span class="movie-list-item-title">Harry Potter</span>
-                             <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                             <span class="movie-list-item-title">John Wick</span>
-                             <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                    </div>
-                </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="movie-list-container">
+            <h1 class="movie-list-title" id="fantazi"></h1>
+            <div class="movie-list-wrapper">
+                <div class="movie-list">
+
+        <div class="card">
+            <img src="img/a7.cHJkLWVtcy1hc3NldHMvbW92aWVzL2IyNTlhNWZkLTNkYzQtNDcxMy1iZWJhLWE0MWFmOTcwYzAyYS5qcGc=" >
+            <div class="details">
+                <h3>Monsterhigh</h3>
+                <p>HD | 2022</p>
+                <p>Fantazi</p>
+                <p>Rating: 5.1 </p>
+                <a href="https://youtu.be/i5i76ZX8F9Q" target="_blank"> <i class="fas fa-play play-icon"></i></a>
             </div>
-        </div>       
+        </div>
+        <div class="card">
+            <img src="img/a8.jpg" >
+            <div class="details">
+                <h3>The Shepherd</h3>
+                <p>HD | 2023</p>
+                <p>Fantazi</p>
+                <p>Rating: 6.2 </p>
+                <a href="https://youtu.be/o3-5U1I-wRk" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a9.jpg" >
+            <div class="details">
+                <h3>Dashing through the snow</h3>
+                <p>HD | 2023</p>
+                <p>Fantazi</p>
+                <p>Rating: 5.5 </p>
+                <a href="https://youtu.be/DbOmSUSmISM" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a10.jpg" >
+            <div class="details">
+                <h3>The new boy</h3>
+                <p>HD | 2023</p>
+                <p>Fantazi</p>
+                <p>Rating: 5.9 </p>
+                <a href="https://youtu.be/sL1HVstmBTU" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a11.jpg" >
+            <div class="details">
+                <h3>Barbie</h3>
+                <p>HD | 2023</p>
+                <p>Fantazi</p>
+                <p>Rating: 7.2 </p>
+                <a href="https://youtu.be/qcGMKd8iego" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="movie-list-container">
+            <h1 class="movie-list-title" id="aventure"></h1>
+            <div class="movie-list-wrapper">
+                <div class="movie-list">
+        <div class="card">
+            <img src="img/a12.webp" >
+            <div class="details">
+                <h3>Kids vs Aliens</h3>
+                <p>HD | 2022</p>
+                <p>Aventure</p>
+                <p>Rating: 5.1 </p>
+                <a href="https://youtu.be/nnM53O5D0Ng" target="_blank"></a> <i class="fas fa-play play-icon"></i>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a13.jpg" >
+            <div class="details">
+                <h3>The Killer</h3>
+                <p>HD | 2023</p>
+                <p>Aventure</p>
+                <p>Rating: 7.0</p>
+                <a href="https://youtu.be/K6Ds8X5olpk" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>    
+        <div class="card">
+            <img src="img/a14.jpg">
+            <div class="details">
+                <h3>Kla Fun</h3>
+                <p>HD | 2024</p>
+                <p>Aventure</p>
+                <p>Rating: |</p>
+                <a href="https://youtu.be/Fk_8ywVaazo" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/a15.jpg">
+            <div class="details">
+                <h3>The moon</h3>
+                <p>HD | 2023</p>
+                <p>Aventure</p>
+                <p>Rating: 6.1</p>
+                <a href="https://youtu.be/gxMM6Ntv78A" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/a16.jpg">
+            <div class="details">
+                <h3>The naughty nine</h3>
+                <p>HD | 2023</p>
+                <p>Aventure</p>
+                <p>Rating: 5.2 | 3 seasons</p>
+                <a href="https://youtu.be/LE4M6xQhBFA" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="movie-list-container">
+            <h1 class="movie-list-title" id="aksion"></h1>
+            <div class="movie-list-wrapper">
+                <div class="movie-list">
+
+        <div class="card">
+            <img src="img/a17.jpg">
+            <div class="details">
+                <h3>Silent Night</h3>
+                <p>HD | 2023</p>
+                <p>Aksion</p>
+                <p>Rating: 5.6 </p>
+                <a href="https://youtu.be/yBnTqn0lBDA" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/the-umbrella-academy.jpg">
+            <div class="details">
+                <h3>Triple Frontier</h3>
+                <p>HD | 2019</p>
+                <p>Aksion</p>
+                <p>Rating: 6.9 </p>
+                <a href="https://youtu.be/us79YXHPqZQ" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/a37.jpg" >
+            <div class="details">
+                <h3>Kill Command</h3>
+                <p>HD | 2016</p>
+                <p>Aksion</p>
+                <p>Rating: 6.3</p>
+                <a href="https://youtu.be/TPLEjs7im9c" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a19.jpg" >
+            <div class="details">
+                <h3>Mission : Impossible</h3>
+                <p>HD | 2023</p>
+                <p>Aksion</p>
+                <p>Rating: 7.9 </p>
+                <a href="https://youtu.be/avz06PDqDbM" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a20.jpg" >
+            <div class="details">
+                <h3>Gran Turismo</h3>
+                <p>HD | 2023</p>
+                <p>Aksion</p>
+                <p>Rating: 7.4 </p>
+                <a href="https://youtu.be/GVPzGBvPrzw" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="movie-list-container">
+            <h1 class="movie-list-title" id="mister"></h1>
+            <div class="movie-list-wrapper">
+                <div class="movie-list">
+        <div class="card">
+            <img src="img/a21.jpg" >
+            <div class="details">
+                <h3>Thanksgiving</h3>
+                <p>HD | 2023</p>
+                <p>Mister</p>
+                <p>Rating: 6.6 </p>
+                <a href="https://youtu.be/cuiJGpVnMiw" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a22.jpg" >
+            <div class="details">
+                <h3>The jewel thief</h3>
+                <p>HD | 2023</p>
+                <p>Mister</p>
+                <p>Rating: 6.4</p>
+                <a href="https://youtu.be/k-YvdNPUESk" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a23.jpg" >
+            <div class="details">
+                <h3>The Relic</h3>
+                <p>HD | 1997</p>
+                <p>Mister</p>
+                <p>Rating: 5.8</p>
+                <a href="https://youtu.be/bFbvUDpRBuo" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a24.jpg" >
+            <div class="details">
+                <h3>Saw X</h3>
+                <p>HD | 2023</p>
+                <p>Mister</p>
+                <p>Rating: 7.0 </p>
+                <a href="https://youtu.be/acQco_ggW1o" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>  
+        <div class="card">
+            <img src="img/a25.jpg" >
+            <div class="details">
+                <h3>Identity</h3>
+                <p>HD | 2003</p>
+                <p>Mister</p>
+                <p>Rating: 7.3 </p>
+                <a href="https://youtu.be/TQkG2x3qTf4" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="movie-list-container">
+            <h1 class="movie-list-title" id="komedi"></h1>
+            <div class="movie-list-wrapper">
+                <div class="movie-list">
+        <div class="card">
+            <img src="img/a23.jpg" >
+            <div class="details">
+                <h3>Kathal</h3>
+                <p>HD | 2023</p>
+                <p>Komedi</p>
+                <p>Rating: 6.7</p>
+                <a href="https://youtu.be/JO58WTosGSs" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a35.jpg" >
+            <div class="details">
+                <h3>The Holdovers</h3>
+                <p>HD | 2023</p>
+                <p>Komedi</p>
+                <p>Rating: 8.1</p>
+                <a href="https://youtu.be/AhKLpJmHhIg"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a34.jpg" >
+            <div class="details">
+                <h3>Rat Race</h3>
+                <p>HD | 2001</p>
+                <p>Komedi</p>
+                <p>Rating: 6.5 </p>
+                <a href="https://youtu.be/OY2S_kY2KWU" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a27.png" >
+            <div class="details">
+                <h3>Dumb Money</h3>
+                <p>HD | 2023</p>
+                <p>Komedi</p>
+                <p>Rating: 7.0 </p>
+                <a href="https://youtu.be/bmr8YmwnZ3w" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>  
+        <div class="card">
+            <img src="img/a28.jpg" >
+            <div class="details">
+                <h3>Old Dads</h3>
+                <p>HD | 2023</p>
+                <p>Komedi</p>
+                <p>Rating: 6.2</p>
+                <a href="https://youtu.be/mU01e6KjM2s" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="movie-list-container">
+            <h1 class="movie-list-title" id="sport"></h1>
+            <div class="movie-list-wrapper">
+                <div class="movie-list">
+        <div class="card">
+            <img src="img/a29.jpg" >
+            <div class="details">
+                <h3>Lady Ballers</h3>
+                <p>HD | 2023</p>
+                <p>Sport</p>
+                <p>Rating: 6.3</p>
+                <a href="https://youtu.be/Py2MzGtmaJ0" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a30.jpg" >
+            <div class="details">
+                <h3>Breaking the ice</h3>
+                <p>HD | 2022</p>
+                <p>Sport</p>
+                <p>Rating: 6.0</p>
+                <a href="https://youtu.be/-GGYz4dGEG0" target="_blank"><i class="fas fa-play play-icon"></i></a> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a31.jpg" >
+            <div class="details">
+                <h3>White man can't jump</h3>
+                <p>HD | </p>
+                <p>Sportr</p>
+                <p>Rating: 4.9 </p>
+                <a href="https://youtu.be/noxvcFVmG4E" target="_blank"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/a32.png" >
+            <div class="details">
+                <h3>Big george Foreman</h3>
+                <p>HD | 2023</p>
+                <p>Sport</p>
+                <p>Rating: 6.5</p>
+                <a href="https://youtu.be/urKDu40iaXk" target="_blank" rel="noopener noreferrer"> <i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>  
+        <div class="card">
+            <img src="img/a33.jpg" >
+            <div class="details">
+                <h3>SWEETWATER</h3>
+                <p>HD | 2023</p>
+                <p>Sport</p>
+                <p>Rating: 5.6</p>
+                <a href="https://youtu.be/c9pITIfdLNo" target="_blank"><i class="fas fa-play play-icon"></i></a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
     </div>
 </body>
 </html>

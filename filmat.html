@@ -10,33 +10,32 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="navbar-container">
+        <div class="navbar-container" >
             <div class="logo-container">
                 <h1 class="logo">Movies</h1>
             </div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li id="li"><a href="index.html"><button class="button">Faqja Kryesore</button></a></li>
-                    <li id="li"><a href="filmat.html"><button class="button">Filmat</button></a></li>
-                    <li id="li"><a href="serialet.html"><button class="button">Serialet</button></a></li>
+                    <li class="menu-list-item"><a href="index.html">Ballina</a></li>
+                    <li class="menu-list-item"><a href="filmat.html">Filmat</a></li>
+                    <li class="menu-list-item"><a href="serialet.html">Serialet</a></li>
+                    <li class="menu-list-item"><a href="#meteshikuarat">Me te shikuarat</a></li>
+                    <li class="menu-list-item"><a href="#meterejat">Me te rejat</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="navbar">
-        <div class="navbar-container">
-            <div class="logo-container">
-                <h1 class="logo">Zhanri</h1>
-            </div>
-            <div class="menu-container">
+    <div>
+        <div style="width: 100%; height: 120px; display: flex; justify-content: center; align-items: center; ">
+            <div class="menu-container" style="display: flex; justify-content: center; align-items: center; background-color: #E9BD43; color: black; padding: 20px; width: 100%;">
                 <ul class="menu-list">
-                    <li class="menu-list-item "><a href="#animuar">Animuar</a></li>
-                    <li class="menu-list-item "><a href="#fantazi">Fantazi</a></li>
-                    <li class="menu-list-item "><a href="#aventure">Aventure</a></li>
-                    <li class="menu-list-item "><a href="#aksion">Aksion</a></li>
-                    <li class="menu-list-item "><a href="#mister">Mister</a></li>
-                    <li class="menu-list-item "><a href="#komedi">Komedi</a></li>
-                    <li class="menu-list-item "><a href="#sport">Sport</a></li>
+                    <li class="menu-list-item "><a href="#animuar"  style="color: black;">Animuar</a></li>
+                    <li class="menu-list-item "><a  style="color: black;" href="#fantazi">Fantazi</a></li>
+                    <li class="menu-list-item "><a  style="color: black;" href="#aventure">Aventure</a></li>
+                    <li class="menu-list-item "><a  style="color: black;" href="#aksion">Aksion</a></li>
+                    <li class="menu-list-item "><a  style="color: black;" href="#mister">Mister</a></li>
+                    <li class="menu-list-item "><a  style="color: black;" href="#komedi">Komedi</a></li>
+                    <li class="menu-list-item "><a  style="color: black;" href="#sport">Sport</a></li>
                 </ul>
             </div>
         </div>
@@ -45,219 +44,652 @@
         <div class="content-container" >
         <div class="content-container">
             <div class="movie-list-container">
-                <h1 class="movie-list-title" id="animuar">Animuar</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f1.jpg" alt="">
-                            <span class="movie-list-item-title">Trolls</span>
-                            <p class="movie-list-item-desc">Animuar</p>
-                            <a href="https://www.youtube.com/watch?v=ftUpFjGKuY0" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f2.jpg" alt="">
-                            <span class="movie-list-item-title">Leo </span>
-                            <p class="movie-list-item-desc">Animuar</p>
-                            <a href="https://www.youtube.com/watch?v=G_AEL-Xo5l8&pp=ygUIbGVvIDIwMjM%3D" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f3.jpg" alt="">
-                            <span class="movie-list-item-title">Spiderman</span>
-                            <p class="movie-list-item-desc">Animuar</p>
-                            <a href=""> <button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/f4.jpg" alt="">
-                           <span class="movie-list-item-title">Padington</span>
-                           <p class="movie-list-item-desc">Animuar</p>
-                           <button class="movie-list-item-button">Watch</button>
-                        </div>
+                <div class="movie-list-wrapper" >
+                    <div class="movie-list" style="width: 100%; display: flex; justify-content: center; align-items: center; ">
+                <h1 class="movie-list-title horizontal-scroll-wrapper squares" id="animuar" style="transform: rotate(-90deg); align-self:center;">Animuar</h1>
+                <div class="card">
+                    <img src="img/bridgerton.jpg" >
+                    <div class="details">
+                        <h3>Bridgerton</h3>
+                        <p>HD | 2020</p>
+                        <p>Romance/Drama/Alternate history</p>
+                        <p>Rating: 7.4 | 3 seasons</p>
+                        <i id="playButton" class="fas fa-play play-icon" style="cursor: pointer;"></i>
+                    </div>
+                    
+                    <!-- JavaScript to handle the click event and play the video -->
+                    <script>
+                    document.getElementById('playButton').addEventListener('click', function() {
+    console.log('Button clicked');
+
+    // Create a video element
+    var videoElement = document.createElement('video');
+    videoElement.width = 640;
+    videoElement.height = 360;
+    videoElement.controls = true;
+    videoElement.style.position = 'absolute';
+    videoElement.style.zIndex = '1';
+
+    // Create a source element for the MP4 video
+    var sourceElement = document.createElement('source');
+    sourceElement.src = 'videos/video.mp4';
+    sourceElement.type = 'video/mp4';
+
+    // Append the source element to the video element
+    videoElement.appendChild(sourceElement);
+
+    // Replace the details div with the video element
+    var detailsElement = document.querySelector('.details');
+    detailsElement.replaceWith(videoElement);
+
+    // Play the video
+    videoElement.play();
+});
+
+                    </script>
+                </div>
+                <div class="card">
+                    <img src="img/s1.jpg" >
+                    <div class="details">
+                        <h3>The Witcher</h3>
+                        <p>HD | 2019</p>
+                        <p>Aksion/Drama/Aventure</p>
+                        <p>Rating: 8.0 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s2.jpg" >
+                    <div class="details">
+                        <h3>Emily in Paris</h3>
+                        <p>HD | 2019</p>
+                        <p>Romance/Drama/Komedi</p>
+                        <p>Rating: 6.9 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s3.jpg" >
+                    <div class="details">
+                        <h3>Stranger Things</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s13.jpg" >
+                    <div class="details">
+                        <h3>Quenns Gambit</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s14.jpg" >
+                    <div class="details">
+                        <h3>Outer Banks</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s15.jpg" >
+                    <div class="details">
+                        <h3>XO, Kitty</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
                     </div>
                 </div>  
             </div> 
             <div class="movie-list-container">
-                <h1 class="movie-list-title" id="fantazi">Fantazi</h1>
                 <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f5.jpg" alt="">
-                            <span class="movie-list-item-title">The Shepherd</span>
-                            <p class="movie-list-item-desc">Fantazi</p>
-                            <a href="https://www.youtube.com/watch?v=8Qn_spdM5Zg" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f6.avif" alt="">
-                            <span class="movie-list-item-title">Barbie</span>
-                            <p class="movie-list-item-desc">Fantazi </p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/f7.jpg" alt="">
-                            <span class="movie-list-item-title">Mona Lisa</span>
-                            <p class="movie-list-item-desc">Fantazi</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/f8.jpg" alt="">
-                           <span class="movie-list-item-title">Abulele</span>
-                           <p class="movie-list-item-desc">Fantazi</p>
-                           <button class="movie-list-item-button">Watch</button>
-                        </div>
+                    <div class="movie-list" style="display: flex; justify-content: center; align-items: center; ">
+                <h1 class="movie-list-title" id="fantazi" style="transform: rotate(-90deg); align-self:center;">Fantazi</h1>
+                <div class="card">
+                    <img src="img/bridgerton.jpg" >
+                    <div class="details">
+                        <h3>Bridgerton</h3>
+                        <p>HD | 2020</p>
+                        <p>Romance/Drama/Alternate history</p>
+                        <p>Rating: 7.4 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s1.jpg" >
+                    <div class="details">
+                        <h3>The Witcher</h3>
+                        <p>HD | 2019</p>
+                        <p>Aksion/Drama/Aventure</p>
+                        <p>Rating: 8.0 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s2.jpg" >
+                    <div class="details">
+                        <h3>Emily in Paris</h3>
+                        <p>HD | 2019</p>
+                        <p>Romance/Drama/Komedi</p>
+                        <p>Rating: 6.9 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s3.jpg" >
+                    <div class="details">
+                        <h3>Stranger Things</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s13.jpg" >
+                    <div class="details">
+                        <h3>Quenns Gambit</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s14.jpg" >
+                    <div class="details">
+                        <h3>Outer Banks</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s15.jpg" >
+                    <div class="details">
+                        <h3>XO, Kitty</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title" id="aventure" >AVENTURE</h1>
                 <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                            <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                            <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                            <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
+                    
+                    <div class="movie-list" style="display: flex; justify-content: center; align-items: center; ">
+                        <h1 class="movie-list-title horizontal-scroll-wrapper squares" id="aventure" style="transform: rotate(-90deg); align-self:center;">Aventure</h1>
+                        <div class="card">
+                            <img src="img/bridgerton.jpg" >
+                            <div class="details">
+                                <h3>Bridgerton</h3>
+                                <p>HD | 2020</p>
+                                <p>Romance/Drama/Alternate history</p>
+                                <p>Rating: 7.4 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                            <span class="movie-list-item-title">Maleficent</span>
-                            <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                            <button class="movie-list-item-button">Watch</button>
+                        <div class="card">
+                            <img src="img/s1.jpg" >
+                            <div class="details">
+                                <h3>The Witcher</h3>
+                                <p>HD | 2019</p>
+                                <p>Aksion/Drama/Aventure</p>
+                                <p>Rating: 8.0 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                            <span class="movie-list-item-title">Harry Potter</span>
-                            <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                            <button class="movie-list-item-button">Watch</button>
+                        <div class="card">
+                            <img src="img/s2.jpg" >
+                            <div class="details">
+                                <h3>Emily in Paris</h3>
+                                <p>HD | 2019</p>
+                                <p>Romance/Drama/Komedi</p>
+                                <p>Rating: 6.9 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                           <span class="movie-list-item-title">John Wick</span>
-                           <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                           <button class="movie-list-item-button">Watch</button>
+                        <div class="card">
+                            <img src="img/s3.jpg" >
+                            <div class="details">
+                                <h3>Stranger Things</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
+                        <div class="card">
+                            <img src="img/s13.jpg" >
+                            <div class="details">
+                                <h3>Quenns Gambit</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s14.jpg" >
+                            <div class="details">
+                                <h3>Outer Banks</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s15.jpg" >
+                            <div class="details">
+                                <h3>XO, Kitty</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title" id="aksion">AKSION</h1>
+               
                 <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/32.webp" alt="">
-                            <span class="movie-list-item-title">La Casa De Papel</span>
-                            <p class="movie-list-item-desc">Sezoni 5</p>
-                            <button class="movie-list-item-button">Watch</button>
+                    <div class="movie-list" style="display: flex; justify-content: center; align-items: center; ">
+                        <h1 class="movie-list-title horizontal-scroll-wrapper squares" id="aksion" style="transform: rotate(-90deg); align-self:center;">Aksion</h1> 
+                        <div class="card">
+                            <img src="img/bridgerton.jpg" >
+                            <div class="details">
+                                <h3>Bridgerton</h3>
+                                <p>HD | 2020</p>
+                                <p>Romance/Drama/Alternate history</p>
+                                <p>Rating: 7.4 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/33.jpg" alt="">
-                            <span class="movie-list-item-title">Who is Erin?</span>
-                            <p class="movie-list-item-desc">Sezoni 1</p>
-                            <button class="movie-list-item-button">Watch</button>
+                        <div class="card">
+                            <img src="img/s1.jpg" >
+                            <div class="details">
+                                <h3>The Witcher</h3>
+                                <p>HD | 2019</p>
+                                <p>Aksion/Drama/Aventure</p>
+                                <p>Rating: 8.0 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/36.jpg" alt="">
-                            <span class="movie-list-item-title">Wednesday</span>
-                            <p class="movie-list-item-desc">Sezoni 1</p>
-                            <button class="movie-list-item-button">Watch</button>
+                        <div class="card">
+                            <img src="img/s2.jpg" >
+                            <div class="details">
+                                <h3>Emily in Paris</h3>
+                                <p>HD | 2019</p>
+                                <p>Romance/Drama/Komedi</p>
+                                <p>Rating: 6.9 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
-                        <div class="movie-list-item">
-                           <img class="movie-list-item-img" src="img/upload.jpg" alt="">
-                           <span class="movie-list-item-title">Upload</span>
-                           <p class="movie-list-item-desc">Sezoni 2</p>
-                           <button class="movie-list-item-button">Watch</button>
+                        <div class="card">
+                            <img src="img/s3.jpg" >
+                            <div class="details">
+                                <h3>Stranger Things</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
                         </div>
+                        <div class="card">
+                            <img src="img/s13.jpg" >
+                            <div class="details">
+                                <h3>Quenns Gambit</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s14.jpg" >
+                            <div class="details">
+                                <h3>Outer Banks</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s15.jpg" >
+                            <div class="details">
+                                <h3>XO, Kitty</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="movie-list-container">
-                 <h1 class="movie-list-title" id="mister" >MISTER</h1>
+                 
                  <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                             <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                             <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                             <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                             <span class="movie-list-item-title">Maleficent</span>
-                             <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                             <span class="movie-list-item-title">Harry Potter</span>
-                             <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                             <span class="movie-list-item-title">John Wick</span>
-                             <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
+                    <div class="movie-list" style="display: flex; justify-content: center; align-items: center; ">
+                        <h1 class="movie-list-title horizontal-scroll-wrapper squares" id="mister" style="transform: rotate(-90deg); align-self:center;">Mister</h1>
+                          <div class="card">
+                    <img src="img/bridgerton.jpg" >
+                    <div class="details">
+                        <h3>Bridgerton</h3>
+                        <p>HD | 2020</p>
+                        <p>Romance/Drama/Alternate history</p>
+                        <p>Rating: 7.4 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s1.jpg" >
+                    <div class="details">
+                        <h3>The Witcher</h3>
+                        <p>HD | 2019</p>
+                        <p>Aksion/Drama/Aventure</p>
+                        <p>Rating: 8.0 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s2.jpg" >
+                    <div class="details">
+                        <h3>Emily in Paris</h3>
+                        <p>HD | 2019</p>
+                        <p>Romance/Drama/Komedi</p>
+                        <p>Rating: 6.9 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s3.jpg" >
+                    <div class="details">
+                        <h3>Stranger Things</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s13.jpg" >
+                    <div class="details">
+                        <h3>Quenns Gambit</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s14.jpg" >
+                    <div class="details">
+                        <h3>Outer Banks</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s15.jpg" >
+                    <div class="details">
+                        <h3>XO, Kitty</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                    </div>
                      </div>
                 </div>
             </div>
             <div class="movie-list-container">
-                 <h1 class="movie-list-title" id="komedi" >KOMEDI</h1>
+                 
                  <div class="movie-list-wrapper">
-                     <div class="movie-list">
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                            <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                            <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                            <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                         </div>
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                            <span class="movie-list-item-title">Maleficent</span>
-                            <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                            <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                            <span class="movie-list-item-title">Harry Potter</span>
-                            <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                            <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                            <span class="movie-list-item-title">John Wick</span>
-                            <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                            <button class="movie-list-item-button">Watch</button>
-                         </div>
+                     <div class="movie-list" style="display: flex; justify-content: center; align-items: center; ">
+                        <h1 class="movie-list-title horizontal-scroll-wrapper squares" id="komedi" style="transform: rotate(-90deg); align-self:center;">Komedi</h1>
+                        <div class="card">
+                            <img src="img/bridgerton.jpg" >
+                            <div class="details">
+                                <h3>Bridgerton</h3>
+                                <p>HD | 2020</p>
+                                <p>Romance/Drama/Alternate history</p>
+                                <p>Rating: 7.4 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s1.jpg" >
+                            <div class="details">
+                                <h3>The Witcher</h3>
+                                <p>HD | 2019</p>
+                                <p>Aksion/Drama/Aventure</p>
+                                <p>Rating: 8.0 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s2.jpg" >
+                            <div class="details">
+                                <h3>Emily in Paris</h3>
+                                <p>HD | 2019</p>
+                                <p>Romance/Drama/Komedi</p>
+                                <p>Rating: 6.9 | 3 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s3.jpg" >
+                            <div class="details">
+                                <h3>Stranger Things</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s13.jpg" >
+                            <div class="details">
+                                <h3>Quenns Gambit</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s14.jpg" >
+                            <div class="details">
+                                <h3>Outer Banks</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/s15.jpg" >
+                            <div class="details">
+                                <h3>XO, Kitty</h3>
+                                <p>HD | 2016</p>
+                                <p>Fantazi/Drama/Horror</p>
+                                <p>Rating: 8.6 | 4 seasons</p>
+                                <i class="fas fa-play play-icon"></i>
+                            </div>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title" id="sport" >SPORT</h1>
+                
                 <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                             <span class="movie-list-item-title">How to lose a guy in 10 days</span>
-                             <p class="movie-list-item-desc">Komedi Romance Drame</p>
-                             <a href="https://www.youtube.com/watch?v=2ZMGk_Ml1fc" target="_blank"><button class="movie-list-item-button">Watch</button></a>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                             <span class="movie-list-item-title">Maleficent</span>
-                             <p class="movie-list-item-desc"> Aventurë Aksion Drame</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                             <span class="movie-list-item-title">Harry Potter</span>
-                             <p class="movie-list-item-desc">Fazntazi Aventure Familjar</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
-                         <div class="movie-list-item">
-                             <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                             <span class="movie-list-item-title">John Wick</span>
-                             <p class="movie-list-item-desc">Drame Aksion Thriller</p>
-                             <button class="movie-list-item-button">Watch</button>
-                         </div>
+                    <div class="movie-list" style="display: flex; justify-content: center; align-items: center; ">
+                        <h1 class="movie-list-title horizontal-scroll-wrapper squares" id="aksion" style="transform: rotate(-90deg); align-self:center;">Aksion</h1>
+                          <div class="card">
+                    <img src="img/bridgerton.jpg" >
+                    <div class="details">
+                        <h3>Bridgerton</h3>
+                        <p>HD | 2020</p>
+                        <p>Romance/Drama/Alternate history</p>
+                        <p>Rating: 7.4 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s1.jpg" >
+                    <div class="details">
+                        <h3>The Witcher</h3>
+                        <p>HD | 2019</p>
+                        <p>Aksion/Drama/Aventure</p>
+                        <p>Rating: 8.0 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s2.jpg" >
+                    <div class="details">
+                        <h3>Emily in Paris</h3>
+                        <p>HD | 2019</p>
+                        <p>Romance/Drama/Komedi</p>
+                        <p>Rating: 6.9 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s3.jpg" >
+                    <div class="details">
+                        <h3>Stranger Things</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s13.jpg" >
+                    <div class="details">
+                        <h3>Quenns Gambit</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s14.jpg" >
+                    <div class="details">
+                        <h3>Outer Banks</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s15.jpg" >
+                    <div class="details">
+                        <h3>XO, Kitty</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <div class="movie-list-wrapper">
+                    <div class="movie-list" style="display: flex; justify-content: center; align-items: center; ">
+                        <h1 class="movie-list-title horizontal-scroll-wrapper squares" id="sport" style="transform: rotate(-90deg); align-self:center;">Sport</h1>
+                          <div class="card">
+                    <img src="img/bridgerton.jpg" >
+                    <div class="details">
+                        <h3>Bridgerton</h3>
+                        <p>HD | 2020</p>
+                        <p>Romance/Drama/Alternate history</p>
+                        <p>Rating: 7.4 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s1.jpg" >
+                    <div class="details">
+                        <h3>The Witcher</h3>
+                        <p>HD | 2019</p>
+                        <p>Aksion/Drama/Aventure</p>
+                        <p>Rating: 8.0 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s2.jpg" >
+                    <div class="details">
+                        <h3>Emily in Paris</h3>
+                        <p>HD | 2019</p>
+                        <p>Romance/Drama/Komedi</p>
+                        <p>Rating: 6.9 | 3 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s3.jpg" >
+                    <div class="details">
+                        <h3>Stranger Things</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s13.jpg" >
+                    <div class="details">
+                        <h3>Quenns Gambit</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s14.jpg" >
+                    <div class="details">
+                        <h3>Outer Banks</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/s15.jpg" >
+                    <div class="details">
+                        <h3>XO, Kitty</h3>
+                        <p>HD | 2016</p>
+                        <p>Fantazi/Drama/Horror</p>
+                        <p>Rating: 8.6 | 4 seasons</p>
+                        <i class="fas fa-play play-icon"></i>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>

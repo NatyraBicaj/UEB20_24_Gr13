@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serialet</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,7 +22,7 @@
         .navbar {
             width: 100%;
             height: 50px;
-            background-color: black;
+            background-color: #E9BD43;
             position: relative;
             top: 0;
         }
@@ -51,6 +52,7 @@
         .menu-list {
             display: flex;
             list-style-type: none;
+            color: #282c34;
         }
 
         .menu-list-item {
@@ -84,90 +86,7 @@
             margin-top: 20px;
         }
 
-        .card {
-            width: 200px;
-            height: 250px;
-            margin: 10px;
-            overflow: hidden;
-            border-radius: 3px;
-            position: relative;
-            background: #444;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .details {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 10px;
-            text-align: left;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
-            opacity: 0;
-            transition: 0.3s;
-        }
-
-        .card:hover .details {
-            opacity: 1;
-        }
-
-        .details h3 {
-            font-size: 16px;
-            margin: 0 0 5px;
-        }
-
-        .details p {
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .play-icon {
-            font-size: 24px;
-            color: #ffd500;
-            cursor: pointer;
-        }
-        .series-list-container{
-            width: 95%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px; 
-            margin-right: 50px;
-            margin-left: 250px;
-        }
         
-        .series-list-wrapper{
-            position: relative;
-            overflow: hidden;
-        }
-        .series-list{
-            margin-right: 10px;
-            position: relative;
-            transition:all 1s ease-in-out;
-            display: flex;
-            align-items: center;
-            height: 300px;
-        }
-        .series-list-title{
-            margin-right: 900px;
-            color:whitesmoke;
-            font-size: 25px;
-            font-weight: inherit;
-            top: 10%;
-            left: 50px; 
-        }
         .arrow{
            background-color: antiquewhite;
            height: 50px;
@@ -210,9 +129,11 @@
             </div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li id="li"><a href="index.html"><button class="button">Faqja Kryesore</button></a></li>
-                    <li class="menu-list-item"><a href="filmat.html"><button class="button">Filmat</button></a></li>
-                    <li id="li"><a href="serialet.html"><button class="button">Serialet</button></a></li>
+                    <li class="menu-list-item fkryesore">Faqja Kryesore</li>
+                    <li class="menu-list-item"><a href="filmat.html">Filmat</a></li>
+                    <li class="menu-list-item"><a href="serialet.html">Serialet</a></li>
+                    <li class="menu-list-item"><a href="#meteshikuarat">Me te shikuarat</a></li>
+                    <li class="menu-list-item"><a href="#meterejat">Me te rejat</a></li>
                 </ul>
             </div>
             <li id="li"><a href="faqja_e_regjistrimit.html"><button class="button">Sign in</button></a></li>

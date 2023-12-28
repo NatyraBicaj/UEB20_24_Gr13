@@ -31,7 +31,7 @@ body {
 .logo{
     
     font-size:30px;
-    color:#E9BD43 ;
+    color:rgb(162, 101, 220);
 }
 .menu-list{
     display:flex;
@@ -48,15 +48,15 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #E9BD43;
+    background-color: rgb(162, 101, 220);
     color: #000;
-    border: 2px solid #E9BD43;
+    border: 2px solid rgb(162, 101, 220);
     border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #E9BD43;
+    background-color: rgb(162, 101, 220);
 }
 
 .sidebar{
@@ -141,7 +141,7 @@ button:hover {
     opacity: 0.5;
 }
 .movie-list-title{
-    color: #E9BD43;
+    color: rgb(162, 101, 220);
 }
 
 .movie-list-item:hover .movie-list-item-title,
@@ -160,7 +160,7 @@ button:hover {
 
 .movie-list-item-title{
     background-color: whitesmoke;
-    color: #E9BD43;;
+    color: rgb(162, 101, 220);
     padding: 0 10px;
     font-size: 20px;
     font-weight: bold;
@@ -222,7 +222,7 @@ body {
 .logo{
     
     font-size:30px;
-    color:#E9BD43 ;
+    color:rgb(162, 101, 220) ;
 }
 .menu-list{
     display:flex;
@@ -239,15 +239,15 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #E9BD43;
+    background-color: rgb(162, 101, 220);
     color: white;
-    border: 2px solid #E9BD43;
+    border: 2px solid rgb(162, 101, 220);
     border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #E9BD43;
+    background-color: rgb(162, 101, 220);
 }
 
 .sidebar{
@@ -452,7 +452,7 @@ button:hover {
 
 .play-icon {
     font-size: 24px;
-    color: #ffd500;
+    color: rgb(162, 101, 220);
     cursor: pointer;
 }
 .series-list-container{

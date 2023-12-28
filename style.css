@@ -198,15 +198,7 @@ button:hover {
     opacity: 0;
     transition: 1s all ease-in-out;
 }
-.arrow {
-    font-size: 120px;
-    position: absolute;
-    top: 90px;
-    right: 0;
-    color: white;
-    opacity: 0.5;
-    cursor: pointer;
-}
+
 * {
     margin: 0;
 }
@@ -383,16 +375,6 @@ button:hover {
     opacity: 0;
     transition: 1s all ease-in-out;
 }
-.arrow {
-    font-size: 120px;
-    position: absolute;
-    top: 90px;
-    right: 0;
-    color: white;
-    opacity: 0.5;
-    cursor: pointer;
-}
-
 .menu-list{
     list-style-type: none;
 }

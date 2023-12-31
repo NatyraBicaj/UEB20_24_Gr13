@@ -21,14 +21,14 @@ arrows.forEach((arrow, i) => {
 });
 
 $(document).ready(function() {
-  $('.show-details').click(function() {
-      var details = $(this).siblings('.details');
+  $('.show-details1').click(function() {
+      var details = $(this).siblings('.details1');
       details.slideToggle();
 
       if (details.is(':visible')) {
-          $(this).text('Hide Details');
+          $(this).text('Hide Details1');
       } else {
-          $(this).text('Show Details');
+          $(this).text('Show Details1');
       }
   });
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
   $('.movie p').last().remove();
   $(document).ready(function() {
 
-    $('.show-details').remove();
+    $('.show-details1').remove();
 });
 });
 

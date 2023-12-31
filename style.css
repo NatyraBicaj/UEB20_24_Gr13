@@ -533,13 +533,13 @@ button:hover {
         margin-bottom: 20px;
         padding: 10px;
     }
-    .details {
+    .details1 {
         font-size: small;
         color: white;
         display: none;
         margin-top: 10px;
     }
-    .show-details{
+    .show-details1{
         background-color: none;
         color: white;
         font-size: small;

@@ -6,7 +6,38 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>MovieSite</title>
+    <style>
+
+        .img{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(img/w1.PNG);
+            height: 60vh;
+            margin: 0;
+            
+        }
+        .movie {
+            color: white;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .details {
+            font-size: small;
+            color: white;
+            display: none;
+            margin-top: 10px;
+        }
+        .show-details{
+            background-color: none;
+            color: white;
+            font-size: small;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -27,17 +58,66 @@
             <button onclick="logIn()">Qasja</button>
         </div>
     </div>
+
     <div class="container">
         <div class="content-container" >
         <div class="content-container">
-            <div class="featured-content"
-            style="background: linear-gradient(to bottom, rgba(0,0,0,0),#151515), url('img/img1.jpg');"
-            >
-               <img class="featured-title" src="img/img2.2.png" alt="" >
-               <p class="featured-desc">Në momentin që vjen fundi i jetës në tokë, një ekip eksploruesish merr përsipër misionin më të rëndësishëm në historinë njerëzore: të udhëtojnë në galaktikë për të zbuluar nëse njerëzimi ka një të ardhme në mesin e yjeve.</p>
-               <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank"> <button class="featured-button">WATCH</button></a>
-              
-            </div>
+            <div class="img">
+                <div class="movie">
+                    <h2>Unlimited movies, series, and more.</h2>
+                    <p class="description">Watch anywhere. Cancel anytime.</p>
+                    <button1 class="show-details">Show Details</button1>
+                    <div class="details">
+                        <p>Created by : Group 3</p>
+                        <p>Release Year: 2023</p>
+                    </div>
+                </div>
+                </div>
+            
+                <script>
+                    $(document).ready(function() {
+                        $('.show-details').click(function() {
+                            var details = $(this).siblings('.details');
+                            details.slideToggle();
+            
+                            if (details.is(':visible')) {
+                                $(this).text('Hide Details');
+                            } else {
+                                $(this).text('Show Details');
+                            }
+                        });
+            
+                        $('.description').fadeOut(2000, function() {
+                            $(this).fadeIn(2000);
+                        });
+            
+                        $('.movie').hover(function() {
+                            $(this).animate({
+                                opacity: 0.7,
+                                marginTop: "-=10px"
+                            }, 200);
+                        }, function() {
+                            $(this).animate({
+                                opacity: 1,
+                                marginTop: "0"
+                            }, 200);
+                        });
+            
+                        var movieTitle = $('.movie h2').first().text();
+                        console.log('Movie Title:', movieTitle);
+            
+                        $('.movie h2').last().text('Unlimited movies, series, and more.');
+            
+                        $('.movie p').first().html('<strong>Watch anywhere. Cancel anytime.</strong>');
+            
+                        $('.movie p').last().remove();
+                        $(document).ready(function() {
+            
+                          $('.show-details').remove();
+                    });
+                    });
+                </script>
+                <br>
             <div class="movie-list-container" >
                 <h1 class="movie-list-title" id="meterejat">ME TE REJAT</h1>
             <div class="movie-list-container">

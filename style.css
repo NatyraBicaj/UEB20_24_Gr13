@@ -517,3 +517,37 @@ button:hover {
     margin-top:20px;
     font-size:18px;
     }
+
+    .img{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(img/w1.PNG);
+        height: 60vh;
+        margin: 0;
+        
+    }
+    .movie {
+        color: white;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    .details {
+        font-size: small;
+        color: white;
+        display: none;
+        margin-top: 10px;
+    }
+    .show-details{
+        background-color: none;
+        color: white;
+        font-size: small;
+        cursor: pointer;
+    }
+    .drag-item {
+       width: 70px;
+       height: auto;
+       position: absolute;
+       cursor: grab;
+    }

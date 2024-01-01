@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            html {
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                font-family: sans-serif;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            body, html {
+                background-color: #0c5fc5;
+                box-sizing: border-box;
+                color: #fff;
+            }
+            body, html {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                background: #f3f3f3;
+                color: #d4d8e0;
+                direction: ltr;
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                font-size: 16px;
+            }
+            a:-webkit-any-link {
+                color: -webkit-link;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .css{
+                z-index: 1000;
+                position: fixed;
+                top: auto;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                -webkit-text-size-adjust: none;
+                -moz-text-size-adjust: none;
+                -ms-text-size-adjust: none;
+                text-size-adjust: none;
+                top: auto;
+                bottom: 0;
+            }
+            .nmtitle-wrapper.with-fixed-header {
+                margin-top: 56px;
+            }
+            .nm-content-header {
+                height: 24px;
+                left: 0;
+                right: 0;
+                top: 0;
+                z-index: 20;
+            }
+            div {
+                display: block;
+            }
+            .nm-content-header {
+                background-color: #a35277;
+                display: flex;
+                justify-content: space-between;
+                padding: 16px 3%;
+                position: fixed;
+            }
+            .nmtitle-section {
+                background: #181818;
+                margin: 0 auto;
+                max-width: 1600px;
+                padding: 25px 5vw;
+                position: relative;
+            }
+            .section-hero {
+                background-position: 100%;
+                line-height: 1.4;
+                margin-bottom: -32px;
+                overflow: hidden;
+                padding: 0 5vw;
+            }
+            section {
+                display: block;
+            }
+            nmtitle-section.section-hero {
+                padding-top: 0;
+            }
+            .section-hero .info-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 800px;
+                min-width: 500px;
+                padding: 16px 32px 64px 0;
+                position: relative;
+                width: 35%;
+                z-index: 2;
+            }
+            .section-hero .logo-container {
+                position: relative;
+                width: 90%;
+            }
+            .section-hero .details-container {
+                margin: 40px 0 0;
+            }
+            .title-title {
+                margin-top: 10px;
+            }
+            .section-hero h1.title-title {
+                color: #fff;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+            @media only screen and (max-width: 599px){
+            .h1 {
+                color: #fff;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 30px;
+             }
+            }
+            h1 {
+                color: #fff;
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 34px;
+            }
+            h2 {
+                display: block;
+                font-size: 1.5em;
+                margin-block-start: 0.83em;
+                margin-block-end: 0.83em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+            @media only screen and (max-width: 599px){
+                h2 {
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+            }
+
+            :-webkit-any(article, aside, nav, section) h1 {
+                font-size: 1.5em;
+                margin-block-start: 0.83em;
+                margin-block-end: 0.83em;
+            }
+            h1 {
+                display: block;
+                font-size: 2em;
+                margin-block-start: 0.67em;
+                margin-block-end: 0.67em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+            #section-seasons-and-episodes  .select-arrow.medium:after {
+                color: #e50914;
+                content: "\e707";
+                font-family: nf-icon;
+                font-size: 14px;
+                right: 8px;
+                top: 10px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="2">
+            <div class="basicLayout" lang="en-AL" dir="ltr">
+                <div class="css"></div>
+                <div class="nmtitle">
+                    <div class="nm-content" data-uia="site-header">
+                        <section class="nmtitle-section" id="section-hero" data-uia="section-hero">
+                            <div class="hero-container" data-uia="hero-container">
+                                <div class="info-container">
+                                    <div class="hero-image hero-image-desktop" style="display:none;background-image: url(&quot;https://occ-4-2835-1490.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABe1idDhKDVNVMTHxMkpftceBGeSbGQ1BRxVKB7mj3YWSC1JA79c3kFO3iDM8_gjXFevN8dXWcXa2jnwM7LAFLjV0JaImKVNhtAgf.jpg?r=d53&quot;);">
+                                        
+                                    </div>
+                                    <div class="logo-container logo-other">
+                                        <img src="img/e1.png" alt="Emily in Paris" class="logo" data-uia="title-logo">
+                                    </div>
+                                    <div class="details-container">
+                                        <div class="title-info" data-uia="title-info">
+                                            <h1 class="title-title" data-uia="title-info-title">Emily in Paris</h1>
+                                            <div class="title-info-metadata-wrapper" data-uia="title-info-metadata-wrapper">
+                                                <span class="title-info-metadata-item item-year" data-uia="item-year">2020</span>
+                                                <span role="presentation" class="info-spacer">|</span>
+                                                <span class="title-info-metadata-item item-maturity" data-uia="item-maturity">
+                                                    <span class="maturity-number">
+                                                    <span class="maturity-number">16+ </span>
+                                                    </span>
+                                                </span>
+                                            <span role="presentation" class="info-spacer"> | </span>
+                                            <span class="title-info-metadata-item item-runtime" data-uia="item-runtime">
+                                                <span class="duration">
+                                                <span class="test_dur_str">3 Sezona</span>
+                                                </span>
+                                            </span>
+                                            <span role="presentation" class="info-spacer"> | </span>
+                                            </div>
+                                            <div class="title-info-synopsis-talent" data-uia="title-info-synopsis-talent">
+                                                <div class="title-info-synopsis" data-uia="title-info-synopsis">
+                                                    Pasi zbarkoi punën e saj të ëndrrave në Paris, drejtuese e marketingut në Çikago
+                                                    Emily Cooper përqafon jetën e saj të re aventureske ndërsa bën xhonglimin e punës,
+                                                     miq dhe romancë.
+                                                </div>
+                                                    <div class="title-info-talent">
+                                                        <div class="title-data-info-item item-starring">
+                                                            <span class="title-data-info-item-label">Me protagonist:</span>
+                                                            <span class="title-data-info-item-list" data-uia="info-starring">
+                                                                Lily Collins, Philippine Leroy-Beaulieu, Ashley Park</span>
+                                                        </div>
+                                                            <div class="title-data-info-item item-creators">
+                                                                <span class="title-data-info-item-label">Krijuesit:</span>
+                                                                <span class="title-data-info-item-list" data-uia="info-creators">Darren Star</span>
+                                                            </div>
+                                                    </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="nmtitle-section" id="section-seasons-and-episodes" data-uia="section-seasons-and-episodes">
+                            <div class="section-header" data-uia="section-header">
+                                <h2 class="section-header-text section-item" data-uia="section-header-text">Episodet</h2>
+                                <h2 class="section-subheader-text section-item" data-uia="section-subheader-text">Emily in Paris</h2>
+                            </div>
+        
+                            <div id="seasons-and-episodes-list-container">
+                                <div class="season season-active" data-uia="season-active">
+                                    <div class="season-metadata">
+                                        <div class="season-release-year" data-uia="season-release-year">
+                                            Viti i lëshimit: 2020
+                                        </div>
+                                        <p class="season-synopsis" data-uia="season-synopsis">
+                                            Pasi zbarkoi punën e saj të ëndrrave në Paris, drejtuese e marketingut në Çikago
+                                            Emily Cooper përqafon jetën e saj të re aventureske ndërsa bën xhonglimin e punës,
+                                            miq dhe romancë.
+                                        </p>
+                                    </div>
+                                        <ol class="episodes-container">
+                                            <li class="episode" data-uia="episode">
+                                               <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Emily in Paris. Episode 1 of Season 1." src="img/ep1.jpg" loading="lazy">
+                                               </figure>
+                                               <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">1. Emily ne Paris</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">30m</span>
+                                               </div>
+                                               <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                Emily sjell qëndrimin e saj të mundshëm amerikan dhe idetë e reja në zyrën e saj të re në Paris,
+                                                por paaftësia e saj për të folur frëngjisht rezulton të jetë një gabim i madh.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Masculin Féminin. Episode 2 of Season 1." src="img/ep2.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">2. Masculin Féminin</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">27m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Emily lundron ndërlikimet e dashurisë franceze kur 
+                                                    entuziazmi në një mbrëmje pune i bën përshtypje një klienti flirtues dhe të martuar.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Sexy or Sexist. Episode 3 of Season 1." src="img/ep3.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">3. Sexy or Sexist</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">27m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Emily shpreh shqetësimet e saj në lidhje me një fushatë të re reklamuese të rrezikshme, ndërsa përballet me problemet e hidraulikës,
+                                                    mësimet e gjuhës dhe kolegët e papëlqyeshëm.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumnail-image" data-uia="episode-thumbnail-image" alt="Watch A Kiss Is Just a Kiss. Episode 4 of Season 1." src="img/ep4.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">4. A Kiss Is Just a Kiss</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">28m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Një njohje e re e ëmbël ndihmon Emily-n të nuhasë një klient të ri potencialisht të madh,
+                                                    por një ndërlidhje e çrregullt në vendin e punës e rrezikon marrëveshjen.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Faux Amis. Episode 5 of Season 1." src="img/ep5.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">5. Faux Amis</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">27m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Emily zbulon se ndjekja e saj në rritje në rrjetet sociale hap dyert në Paris,
+                                                    dhe një natë miqësore në qytet të çon në një takim me Gabrielin.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Ringarde. Episode 6 of Season 1." src="img/ep6.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">6. Ringarde</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">30m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Kur një takim me një shtëpi ikonë të modës zbulohet për një gabim themelor,
+                                                    Emily gjen ngushëllim në shoqërinë e një profesori në dukje simpatik.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch French Ending. Episode 7 of Season 1." src="img/ep7.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">7. French Ending</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">29m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Pasi pranon të kujdeset për një aktore amerikane në një event elegant në tapetin e kuq,
+                                                     nata e saj dhe akuza e saj e famshme del jashtë kontrollit.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Family Affair. Episode 8 of Season 1." src="img/ep8.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">8. Family Affair</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">30m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Udhëtimi i Emily-t në fundjavë në kështjellën e një shoqeje zien si shampanjë njëditore.
+                                                    Në Paris, takimi ngurrues i Mindy me miqtë e vjetër përfundon me një notë të lartë.</p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch An American Auction in Paris. Episode 9 of Season 1." src="img/ep9.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">9. An American Auction in Paris</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">25m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Një ankand bamirësie, një fustan i dhuruar dhe një dyshe dizajni avangardë sjellin telashe
+                                                    për Emily-n teksa i bie në sy trashëgimtari i dukshëm i Pierre Cadault.
+                                                </p>
+                                            </li>
+                                            <li class="episode" data-uia="episode">
+                                                <figure class="episode-thumbnail" data-uia="episode-thumbnail">
+                                                    <span class="episode-thumbnail-gradient"></span>
+                                                    <img class="episode-thumbnail-image" data-uia="episode-thumbnail-image" alt="Watch Cancel Couture. Episode 10 of Season 1." src="img/ep10.jpg" loading="lazy">
+                                                </figure>
+                                                <div class="episode-metadata">
+                                                    <h3 class="episode-title" data-uia="episode-title">10. Cancel Couture</h3>
+                                                    <span class="episode-runtime" data-uia="episode-runtime">35m</span>
+                                                </div>
+                                                <p class="epsiode-synopsis" data-uia="episode-synopsis">
+                                                    Me punën e saj në linjë gjatë një debakli në Javën e Modës,
+                                                    Emily përpiqet të hartojë një plan të ri ndërsa përgatitet t'i thotë lamtumirën një miku të mirë.
+                                                </p>
+                                            </li>                               
+                                         </ol>
+                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

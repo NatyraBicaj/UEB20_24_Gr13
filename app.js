@@ -51,9 +51,9 @@ $(document).ready(function() {
   var movieTitle = $('.movie h2').first().text();
   console.log('Movie Title:', movieTitle);
 
-  $('.movie h2').last().text('Unlimited movies, series, and more.');
+  $('.movie h2').last().text('Filma dhe seriale pakufi.');
 
-  $('.movie p').first().html('<strong>Watch anywhere. Cancel anytime.</strong>');
+  $('.movie p').first().html('<strong>Kalo nj&euml; koh&euml; sa m&euml; t&euml; mir&euml;!</strong>');
 
   $('.movie p').last().remove();
   $(document).ready(function() {

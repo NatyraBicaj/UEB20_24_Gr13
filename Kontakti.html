@@ -52,8 +52,8 @@
                 <li class="menu-list-item fkryesore"><a href="index.html">Ballina</a></li>
                 <li class="menu-list-item"><a href="filmat.html">Filmat</a></li>
                 <li class="menu-list-item"><a href="serialet.html">Serialet</a></li>
-                <li class="menu-list-item"><a href="#meteshikuarat">Me te shikuarat</a></li>
-                <li class="menu-list-item"><a href="#meterejat">Me te rejat</a></li>
+                <li class="menu-list-item"><a href="#meteshikuarat">M&euml; t&euml; shikuarat</a></li>
+                <li class="menu-list-item"><a href="#meterejat">M&euml; t&euml; rejat</a></li>
             </ul>
         </div>
 
@@ -64,7 +64,7 @@
       <div class="text">
         <h1>Kontakti</h1>
         <div class="violetline"></div>
-        <p>Keni pyetje ? Ndoshta ne kemi pergjigje</p>
+        <p>Keni pyetje ? Ndoshta ne kemi p&euml;rgjigje</p>
       </div>
     </div>
     <div class="kontakti">
@@ -114,8 +114,8 @@
             </div>
           </div>
           <div class="btn-sm">
-            <input type="submit" value="DERGO MESAZHIN" class="sm-button" id="submit-btn"> 
-            <a href="#" onclick="clearFunc()">Fillo perseri</a>
+            <input type="submit" value="D&Euml;RGO MESAZHIN" class="sm-button" id="submit-btn"> 
+            <a href="#" onclick="clearFunc()">Fillo p&euml;rs&euml;ri</a>
           </div>
         </form>
       </div>
@@ -126,12 +126,12 @@
     <div class="container address">
       <div class="row add-row">
         <div class="col-sm-6">
-          <h3>Adresa jone:</h3>
+          <h3>Adresa jon&euml;:</h3>
           <div class="violetline-address"></div>
           <address>
             <p>Bregu i Diellit</p>
-          <p>p.n. 10000 Prishtinë</p>
-          <p> Republika e Kosovës</p>
+          <p>p.n. 10000 Prishtin&euml;</p>
+          <p> Republika e Kosov&euml;s</p>
           </address>
           <div class="phone-e">
             <p><span class="glyphicon glyphicon-envelope"> </span> fiek@uni-pr.edu</p>
@@ -165,7 +165,7 @@
             </ul>
           </div>
           <div class="footer-middle">
-            <h2 class="footer-heading">Sherbimet</h2>
+            <h2 class="footer-heading">Sh&euml;rbimet</h2>
             <ul class="footer-middle-list">
               <li class="footer-middle-list-item"><a href="filmat.html">Filmat</a> </li>
               <li class="footer-middle-list-item"><a href="serialet.html">Serialet</a> </li>
@@ -176,7 +176,7 @@
           <div class="footer-right">
             <p class="footer-links">
             <h2 class="footer-heading">Kontakti</h2>
-            <p class="footer-bottom-tagline">Mund te na kontaktoni</p>
+            <p class="footer-bottom-tagline">Mund t&euml; na kontaktoni</p>
             <a class="footer-contact-button" href="Kontakti.html">Kontakti</a>
             </p>
           </div>
@@ -226,7 +226,7 @@
       const message = document.getElementById("message");
       let alphabets = /^[A-Za-z]+$/ ; 
       if (firstname.value.trim().length === 0 && lastname.value.trim().length === 0 && email.value.trim().length === 0 && phone.value.trim().length === 0 && subject.value.trim().length === 0 && message.value.trim().length === 0  ){
-       swal("Oops..." , "Ju lutem! Se pari plotesoni fushat ." , "error"); 
+       swal("Oops..." , "Ju lutem! S&euml; pari plot&euml;soni fushat ." , "error"); 
         return false ; 
       }
       if (firstname.value.trim().length === 0 ) {
@@ -234,12 +234,12 @@
         return false ; 
       }
       if (!firstname.value.trim().match(alphabets) ){
-        swal("Oops..." , "Ju lutem! Shkruani nje emer valid ." , "error"); 
+        swal("Oops..." , "Ju lutem! Shkruani n&euml; em&euml;r valid ." , "error"); 
         return false; 
       }
       if(lastname.value.trim().length > 0 ) {
         if (!lastname.value.trim().match(alphabets) ){
-        swal("Oops..." , "Ju lutem! Shkruani nje mbiemer valid ." , "error"); 
+        swal("Oops..." , "Ju lutem! Shkruani nj&euml; mbiem&euml;r valid ." , "error"); 
         return false; 
         }
       }
@@ -248,11 +248,11 @@
         return false ; 
       }
       if (!email.value.trim().includes("@gmail.com")) {
-        swal("Oops..." , "Ju lutem! Shkruani nje email valid ." , "error"); 
+        swal("Oops..." , "Ju lutem! Shkruani nj&euml; email valid ." , "error"); 
         return false ; 
       }
       if ( phone.value.trim().length != 9 ||  isNaN(phone.value.trim()) ) {
-        swal("Oops..." , "Numri i telefonit duhet te kete 9 numra . " , "error"); 
+        swal("Oops..." , "Numri i telefonit duhet t&euml; ket&euml; 9 numra . " , "error"); 
         return false ; 
       }
       if (subject.value.trim().length === 0 ) {
@@ -263,7 +263,7 @@
         swal("Oops..." , "Ju lutem! Shkruani mesazhin tuaj ." , "error"); 
         return false ; 
       }
-      swal("Sukses!", "Mesazhi eshte derguar me sukses! Faleminderit per kohen tuaj", "success");
+      swal("Sukses!", "Mesazhi &euml;sht&euml; d&euml;rguar me sukses! Faleminderit p&euml;r koh&euml;n tuaj", "success");
       return true ; 
     }
 

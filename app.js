@@ -22,17 +22,17 @@ arrows.forEach((arrow, i) => {
 
 $(document).ready(function() {
   $('.show-details1').click(function() {
-      var details = $(this).siblings('.details1');
-      details.slideToggle();
+      var details1 = $(this).siblings('.details1');
+      details1.slideToggle();
 
-      if (details.is(':visible')) {
+      if (details1.is(':visible')) {
           $(this).text('Hide Details1');
       } else {
           $(this).text('Show Details1');
       }
   });
 
-  $('.description').fadeOut(2000, function() {
+  $('.description1').fadeOut(2000, function() {
       $(this).fadeIn(2000);
   });
 

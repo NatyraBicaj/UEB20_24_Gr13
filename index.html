@@ -17,7 +17,7 @@
             </div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li class="menu-list-item fkryesore">Ballina</li>
+                    <li class="menu-list-item fkryesore"><a href="index.html">Ballina</a></li>
                     <li class="menu-list-item"><a href="filmat.html">Filmat</a></li>
                     <li class="menu-list-item"><a href="serialet.html">Serialet</a></li>
                     <li class="menu-list-item"><a href="#meteshikuarat">Me te shikuarat</a></li>
@@ -155,7 +155,7 @@
             <p class="footer-links">
             <h2 class="footer-heading">Kontakti</h2>
             <p class="footer-bottom-tagline">Mund te na kontaktoni</p>
-            <a class="footer-contact-button" href="#">Kontakti</a>
+            <a class="footer-contact-button" href="Kontakti.html">Kontakti</a>
             </p>
           </div>
         </div>
@@ -172,6 +172,26 @@
       }
     </script>
     <script src="app.js"></script>
-
+    <script>
+        $(document).ready(function () {
+          var scrollTopButton = document.getElementById("scrollToTopButton");
+          window.onscroll = function () {
+            scrollFunction()
+          };
+      
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              scrollTopButton.style.display = "block";
+            } else {
+              scrollTopButton.style.display = "none";
+            }
+          }
+          $("#scrollToTopButton").click(function () {
+            $('html ,body').animate({
+              scrollTop: 0
+            }, 800)
+          });
+        });
+      </script>
 </body>
 </html>

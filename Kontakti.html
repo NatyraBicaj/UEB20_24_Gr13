@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <title>Kontakti</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="styleKontakti.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_3Y57GrE42p8s0kTrKxP0W");
+    })();
+  </script>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+        this.contact_number.value = Math.random() * 100000 | 0;
+        
+        emailjs.sendForm('contact_service', 'contact_form', this)
+          .then(function () {
+            console.log('SUCCESS!');
+          }, function (error) {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-container">
+        <div class="logo-container">
+            <h1 class="logo">Movies</h1>
+        </div>
+        <div class="menu-container">
+            <ul class="menu-list">
+                <li class="menu-list-item fkryesore"><a href="index.html">Ballina</a></li>
+                <li class="menu-list-item"><a href="filmat.html">Filmat</a></li>
+                <li class="menu-list-item"><a href="serialet.html">Serialet</a></li>
+                <li class="menu-list-item"><a href="#meteshikuarat">Me te shikuarat</a></li>
+                <li class="menu-list-item"><a href="#meterejat">Me te rejat</a></li>
+            </ul>
+        </div>
+
+        <button onclick="logIn()">Qasja</button>
+    </div>
+</div>
+    <div class="box">
+      <div class="text">
+        <h1>Kontakti</h1>
+        <div class="violetline"></div>
+        <p>Keni pyetje ? Ndoshta ne kemi pergjigje</p>
+      </div>
+    </div>
+    <div class="kontakti">
+      <h2>Na kontaktoni</h2>
+      <div class="violetline"></div>
+    </div>
+    <div class="container fill">
+      <div class="forthis">
+        <form action="https://formcarry.com/s/S1peCWurw0C" method="POST" name="contact-form" id="contact-form" onsubmit="return validateForm();">
+          <div class="form-row two2">
+            <div class="form-group col-md-6 column">
+              <input type="text" class="form-control input" id="firstname" name="firstname" placeholder=" " >
+              <label for="firstname" class=""><u>Emri:</u></label>
+              <div class="underline">
+              </div>
+            </div>
+            <div class="form-group col-md-6 column">
+              <input type="text" class="form-control input" id="lastname" name="lastname" placeholder=" " >
+              <label for="lastname" class=""><u>Mbiemri:</u></label>
+              <div class="underline"></div>
+            </div>
+          </div>
+          <div class="form-row one1">
+            <div class="form-group col-lg-6 column">
+              <input type="text" class="form-control input" id="email" name="email" placeholder=" " >
+              <label for="email" class=""><u>Email:</u></label>
+              <div class="underline"></div>
+            </div>
+            <div class="form-group col-lg-6 column">
+              <input type="text" class="form-control input" id="phone" name="phone"  placeholder=" ">
+              <label for="number" class=""><u>Numri telefonit:</u></label>
+              <div class="underline"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group column">
+              <input type="text" class="form-control input" name="subject" id="subject" placeholder=" " >
+              <label for="subject" class=""><u>Subjekti:</u></label>
+              <div class="underline extra"></div>
+            </div>
+          </div>
+          <div class="form-row size">
+            <div class="form-group column">
+              <textarea type="text" class="form-control input" name="message" id="message" rows="5"  placeholder=" "></textarea>
+              <label for="message" class=""><u>Mesazhi:</u></label>
+              <div class="underline extra gap"></div>
+            </div>
+          </div>
+          <div class="btn-sm">
+            <input type="submit" value="DERGO MESAZHIN" class="sm-button" id="submit-btn"> 
+            <a href="#" onclick="clearFunc()">Fillo perseri</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    
+
+    <div class="container address">
+      <div class="row add-row">
+        <div class="col-sm-6">
+          <h3>Adresa jone:</h3>
+          <div class="violetline-address"></div>
+          <address>
+            <p>Bregu i Diellit</p>
+          <p>p.n. 10000 Prishtinë</p>
+          <p> Republika e Kosovës</p>
+          </address>
+          <div class="phone-e">
+            <p><span class="glyphicon glyphicon-envelope"> </span> fiek@uni-pr.edu</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +383(0)38 554 896 </p>
+          </div>
+        </div>
+        <div class="col-sm-6 map-padd">
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1467.296425333013!2d21.165863238795012!3d42.64879069279192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ec1b6ecb2c1%3A0x7f0893730efce187!2sFakulteti%20Teknik!5e0!3m2!1sen!2s!4v1704029283729!5m2!1sen!2s" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    
+
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+          <div class="footer-middle">
+            <h2 class="footer-heading">Rrjetet Sociale</h2>
+            <ul class="footer-middle-list icons">
+              <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                  class="fab fa-facebook-f facebook" style="color:blueviolet"></i></a>
+              <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+                  class="fab fa-twitter twitter" style="color:blueviolet"></i></a>
+              <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+                  class="fab fa-linkedin linkedin" style="color:blueviolet"></i></a>
+              <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+                  class="fab fa-instagram instagram" style="color:blueviolet"></i></a>
+              <a class="footer-links" href="https://github.com/" target="_blank"><i
+                  class="fab fa-github github" style="color:blueviolet"></i></a>
+            </ul>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">Sherbimet</h2>
+            <ul class="footer-middle-list">
+              <li class="footer-middle-list-item"><a href="filmat.html">Filmat</a> </li>
+              <li class="footer-middle-list-item"><a href="serialet.html">Serialet</a> </li>
+              <li class="footer-middle-list-item"><a href="Qasja.html">Qasja</a> </li>
+        
+            </ul>
+          </div>
+          <div class="footer-right">
+            <p class="footer-links">
+            <h2 class="footer-heading">Kontakti</h2>
+            <p class="footer-bottom-tagline">Mund te na kontaktoni</p>
+            <a class="footer-contact-button" href="Kontakti.html">Kontakti</a>
+            </p>
+          </div>
+        </div>
+        <hr class="footer-hr">
+        <div class="footer-copyright">
+          <p>Copyright &copy; and &reg; Since
+            <script>
+              document.write(new Date().getFullYear())
+            </script> 
+        </div>
+      </footer>
+      <script> function logIn() {
+        window.location.href = 'Qasja.html';
+      }
+    </script>
+    
+    <script>
+      $(document).ready(function () {
+        var scrollTopButton = document.getElementById("scrollToTopButton");
+        window.onscroll = function () {
+          scrollFunction()
+        };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+          } else {
+            scrollTopButton.style.display = "none";
+          }
+        }
+        $("#scrollToTopButton").click(function () {
+          $('html ,body').animate({
+            scrollTop: 0
+          }, 800)
+        });
+      });
+    </script>
+    <script type="text/javascript">
+
+    function validateForm(){
+      const firstname = document.getElementById("firstname");
+      const lastname = document.getElementById("lastname");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phone");
+      const subject = document.getElementById("subject");
+      const message = document.getElementById("message");
+      let alphabets = /^[A-Za-z]+$/ ; 
+      if (firstname.value.trim().length === 0 && lastname.value.trim().length === 0 && email.value.trim().length === 0 && phone.value.trim().length === 0 && subject.value.trim().length === 0 && message.value.trim().length === 0  ){
+       swal("Oops..." , "Ju lutem! Se pari plotesoni fushat ." , "error"); 
+        return false ; 
+      }
+      if (firstname.value.trim().length === 0 ) {
+        swal("Oops..." , "Ju lutem! Shkruani emrin tuaj ." , "error"); 
+        return false ; 
+      }
+      if (!firstname.value.trim().match(alphabets) ){
+        swal("Oops..." , "Ju lutem! Shkruani nje emer valid ." , "error"); 
+        return false; 
+      }
+      if(lastname.value.trim().length > 0 ) {
+        if (!lastname.value.trim().match(alphabets) ){
+        swal("Oops..." , "Ju lutem! Shkruani nje mbiemer valid ." , "error"); 
+        return false; 
+        }
+      }
+      if (email.value.trim().length === 0 ) {
+        swal("Oops..." , "Ju lutem! Shkruani emailin tuaj ." , "error"); 
+        return false ; 
+      }
+      if (!email.value.trim().includes("@gmail.com")) {
+        swal("Oops..." , "Ju lutem! Shkruani nje email valid ." , "error"); 
+        return false ; 
+      }
+      if ( phone.value.trim().length != 9 ||  isNaN(phone.value.trim()) ) {
+        swal("Oops..." , "Numri i telefonit duhet te kete 9 numra . " , "error"); 
+        return false ; 
+      }
+      if (subject.value.trim().length === 0 ) {
+        swal("Oops..." , "Ju lutem! Shkruani subjektin ." , "error"); 
+        return false ; 
+      }
+      if (message.value.trim().length === 0 ) {
+        swal("Oops..." , "Ju lutem! Shkruani mesazhin tuaj ." , "error"); 
+        return false ; 
+      }
+      swal("Sukses!", "Mesazhi eshte derguar me sukses! Faleminderit per kohen tuaj", "success");
+      return true ; 
+    }
+
+    document.getElementById("submit-btn").addEventListener("click" , validateForm);
+
+      function clearFunc() {
+        document.getElementById("firstname").value = "";
+        document.getElementById("lastname").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("message").value = "";
+      }
+
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   
+
+</body>
+
+</html>

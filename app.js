@@ -88,3 +88,13 @@ dragPhoto.addEventListener('mousedown', function(event) {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  var filmatLink = document.getElementById("filmat-link");
+
+  if (filmatLink) {
+      filmatLink.addEventListener("click", function() {
+          window.location.href = "filmat.html";
+      });
+  }
+});

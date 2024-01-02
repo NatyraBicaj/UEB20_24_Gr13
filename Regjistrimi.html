@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         @font-face {
             font-family: 'woff2';
@@ -37,6 +38,7 @@
              min-height: 100vh;
              margin: 0;
              padding: 30px;
+             box-sizing: border-box;
         }
 .container {
             background-image: linear-gradient(to left, var(--primary-color) 1%, transparent 100%);
@@ -194,10 +196,20 @@
 </head>
 
 <body>
+    <audio controls autoplay>
+        <source src="audio/audio.mp3" type="audio/mp3">
+        
+    </audio>
     <div class="container">
         <div class="column1">
             <form id="form" class="form" onsubmit="return validateForm()">
                 <h2>Krijo llogarin&euml; t&euml;nde</h2>
+                <svg width="125" height="125">
+                    <circle r="55.5" cx="55.5" cy="125" fill="purple" /> 
+                
+                    <circle r="30" cx="55.5" cy="55.5" fill="#d8b9ff" />
+                    <rect x="0" y="0" height="5" width="125" fill="purple"/>
+                </svg>
                 <div class="form-control">
                     <label for="username">Emri i p&euml;rdoruesit</label>
                     <input type="text" id="username" placeholder="Shkruani emrin e p&euml;rdoruesit" required>
@@ -206,6 +218,7 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Shkruani email" required>
                 </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div class="form-control">
                     <label for="password">Fjal&euml;kalimi</label>
                     <input type="password" id="password" placeholder="Shkruani fjal&euml;kalimin" required>
@@ -214,10 +227,22 @@
                     <label for="password2">Konfirmo fjal&euml;kalimin</label>
                     <input type="password" id="password2" placeholder="Shkruani fjal&euml;kalimin p&euml;rs&euml;ri " required>
                 </div>
+            </div>
                 <button type="submit">Krijo</button>
             </form>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+          $("#btn1").click(function(){
+            $("svg").animate({height: "185px"});
+          });
+          $("#btn2").click(function(){
+            console.log("btn2 clicked")
+            $("svg").animate({height: "100px"});
+          });
+        });
+        </script>
 
     <script>
         function validateForm() {
@@ -251,6 +276,11 @@
             return true;
         }
     </script>
+    
+  <div style="position: absolute; bottom: 4px; right: 4px;">
+    <button id="btn1">Full length</button>
+    <button id="btn2">Profile</button>
+  </div>
 </body>
 
 </html>

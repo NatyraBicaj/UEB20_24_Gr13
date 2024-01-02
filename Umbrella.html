@@ -1,47 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>The Umbrella Academy</title>
-<style>
- body {
-    background-color: #000;
-    color: blueviolet;
-    font-family: Arial, sans-serif;
- }
+  <title>The Umbrella Academy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: blueviolet;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
 
- .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
- }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
- .video-player {
-    width: 100%;
-    height: 450px;
- }
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
 
- .video-info {
-    margin-top: 20px;
- }
-</style>
+    .video-player {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .video-info {
+      margin-top: 20px;
+    }
+
+    .footer-copyright{
+        text-align: center;
+        color:white;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
- <h1>The Umbrella Academy</h1>
+  <div class="container">
+    <header>
+      <h1>The Umbrella Academy</h1>
+    </header>
 
- <div class="video-player">
-    <video width="100%" height="450" controls>
-      <source src="videos/The Umbrella Academy _ Official Trailer _ Netflix.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
- </div>
+    <main>
+      <div class="video-player">
+        <video width="100%" height="auto" controls poster="path/to/poster-image.jpg">
+          <source src="videos/The Umbrella Academy _ Official Trailer _ Netflix.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
- <div class="video-info">
-    <h2>The Umbrella Academy</h2>
-    <p>Pasi kan&euml; ndalur apokalipsin, an&euml;tar&euml;t e Akademis&euml; Umbrella kthehen n&euml; sht&euml;pi, vet&euml;m p&euml;r t&euml; zbuluar se po jetojn&euml; n&euml; nj&euml; t&euml; ardhme alternative, n&euml; t&euml; cil&euml;n, ata vet&euml; nuk kan&euml; ekzistuar kurr&euml;. N&euml; vend t&euml; tyre, Reginald Hargreeves ka adoptuar nj&euml; grup t&euml; ndrysh&euml;m f&euml;mij&euml;sh me superfuqi dhe i quajti ata Akademia Sparrou. Tashm&euml;, an&euml;tar&euml;t e dy akademive, do t&euml; gjenden n&euml; nj&euml; situat&euml; q&euml; do t&euml; p&euml;piqen ta zgjidhin sipas m&euml;nyrave t&euml; tyre...</p>
- </div>
-</div>
+      <section class="video-info">
+        <h2>The Umbrella Academy</h2>
+        <p>Pasi kan&euml; ndalur apokalipsin, an&euml;tar&euml;t e Akademis&euml; Umbrella kthehen n&euml; sht&euml;pi, vet&euml;m p&euml;r t&euml; zbuluar se po jetojn&euml; n&euml; nj&euml; t&euml; ardhme alternative, n&euml; t&euml; cil&euml;n, ata vet&euml; nuk kan&euml; ekzistuar kurr&euml;. N&euml; vend t&euml; tyre, Reginald Hargreeves ka adoptuar nj&euml; grup t&euml; ndrysh&euml;m f&euml;mij&euml;sh me superfuqi dhe i quajti ata Akademia Sparrou. Tashm&euml;, an&euml;tar&euml;t e dy akademive, do t&euml; gjenden n&euml; nj&euml; situat&euml; q&euml; do t&euml; p&euml;piqen ta zgjidhin sipas m&euml;nyrave t&euml; tyre...</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-copyright">
+          <p>Copyright &copy; and &reg; Since
+              <script>
+                  document.write(new Date().toLocaleDateString())
+                </script> 
+        </div>
+  </footer>
+  </div>
 
 </body>
 </html>

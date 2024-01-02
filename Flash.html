@@ -1,47 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>The Flash</title>
-<style>
- body {
-    background-color: #000;
-    color: blueviolet;
-    font-family: Arial, sans-serif;
- }
+  <title>The Flash</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: blueviolet;
+      font-family: Arial, sans-serif;
+      margin: 0; 
+    }
 
- .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
- }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
- .video-player {
-    width: 100%;
-    height: 450px;
- }
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
 
- .video-info {
-    margin-top: 20px;
- }
-</style>
+    .video-player {
+      width: 100%;
+      height: 450px;
+      margin-top: 20px;
+    }
+
+    .video-info {
+      margin-top: 20px;
+    }
+
+    .footer-copyright{
+        text-align: center;
+        color:white;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
- <h1>The Flash</h1>
+  <div class="container">
+    <header>
+      <h1>The Flash</h1>
+    </header>
 
- <div class="video-player">
-    <video width="100%" height="450" controls>
-      <source src="videos/The Flash_ Trailer for Season 1's Final Episodes.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
- </div>
+    <main>
+      <div class="video-player">
+        <video width="100%" height="450" controls>
+          <source src="videos/The Flash_ Trailer for Season 1's Final Episodes.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
- <div class="video-info">
-    <h2>The Flash</h2>
-    <p>N&euml;nt&euml; muaj pas S.T.A.R Labs ka shp&euml;rthyer, Barri zgjohet p&euml;r t&euml; gjetur fakte por diçka ka ndodhur q&euml; ai &euml;sht&euml; n&euml; kome, me ndihm&euml;n e miqve t&euml; tij Barri duhet p&euml;rpiqet me forcat e tij t&euml; gjej pronaret e S.T.A.R Labs.</p>
- </div>
-</div>
+      <section class="video-info">
+        <h2>The Flash</h2>
+        <p>N&euml;nt&euml; muaj pas S.T.A.R Labs ka shp&euml;rthyer, Barri zgjohet p&euml;r t&euml; gjetur fakte por diçka ka ndodhur q&euml; ai &euml;sht&euml; n&euml; kome, me ndihm&euml;n e miqve t&euml; tij Barri duhet p&euml;rpiqet me forcat e tij t&euml; gjej pronaret e S.T.A.R Labs.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-copyright">
+        <p>Copyright &copy; and &reg; Since
+          <script>
+            document.write(new Date().toLocaleDateString())
+          </script>
+        </p>
+      </div>
+    </footer>
+  </div>
 
 </body>
 </html>

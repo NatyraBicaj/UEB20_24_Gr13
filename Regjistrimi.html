@@ -24,18 +24,21 @@
         }
 
         body {
-            background: linear-gradient(to right, rgb(197, 118, 231), #f6f8fb);
-            background-size: cover;
-            font-family: "Poppins", sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 30px;
+             background-image: url('img/pink.jpg'), url('img/movie.jpg');
+             background-position: top left, bottom right;
+             background-repeat: repeat, repeat;
+             background-size: 20%, 20%;
+             background-attachment: fixed;
+             background-blend-mode: multiply;
+             font-family: "Poppins", sans-serif;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             min-height: 100vh;
+             margin: 0;
+             padding: 30px;
         }
-
-        .container {
+.container {
             background-image: linear-gradient(to left, var(--primary-color) 1%, transparent 100%);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             border: 1px solid var(--primary-color);
@@ -51,7 +54,7 @@
         h2 {
             font-size: 36px;
             font-weight: 700;
-            color: #300646;
+            color: #dbb7ee;
             margin: 0 0 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
@@ -74,7 +77,7 @@
         }
 
         .form-control label {
-            color: #333;
+            color: #dbb7ee;
             display: block;
             margin-bottom: 5px;
         }

@@ -69,13 +69,13 @@ button:hover {
   }
  
   .box {
-    background: url(img/img1111.jpeg);
-    background-repeat: repeat-x;
+    background: url(img/img1111.jpeg) repeat-x;
     background-size: 50%;
     color: white;
     text-align: center;
     z-index: 1;
-  }
+}
+
   .text {
     padding: 100px 0;
   }
@@ -394,6 +394,7 @@ button:hover {
     .footer-middle-list-item{
     list-style:none;
     list-style-type: disc;
+    color: white;
     font-size:15px;
     font-family:'Roboto';
     margin:5px 0px 0px 15px;

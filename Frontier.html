@@ -1,47 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Frontier</title>
-<style>
- body {
-    background-color: #000;
-    color: blueviolet;
-    font-family: Arial, sans-serif;
- }
+  <title>Frontier</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: blueviolet;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
 
- .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
- }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
- .video-player {
-    width: 100%;
-    height: 450px;
- }
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
 
- .video-info {
-    margin-top: 20px;
- }
-</style>
+    .video-player {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .video-info {
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .footer-copyright{
+        text-align: center;
+        color:white;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
- <h1>Frontier</h1>
+  <div class="container">
+    <header>
+      <h1>Frontier</h1>
+    </header>
 
- <div class="video-player">
-    <video width="100%" height="450" controls>
-      <source src="videos/Frontier _ Official Trailer [HD] _ Netflix.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
- </div>
+    <main>
+      <div class="video-player">
+        <video width="100%" height="auto" controls poster="path/to/poster-image.jpg">
+          <source src="videos/Frontier _ Official Trailer [HD] _ Netflix.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
- <div class="video-info">
-    <h2>Frontier</h2>
-    <p>Tregtia e g&euml;zofit n&euml; fund t&euml; viteve 1700 ishte nj&euml; koh&euml; lakmie, dhune dhe ambicie. Seriali Game of Thrones, seriali Turn, jan&euml; histori t&euml; dhunshme, por edhe Frontier tregon nj&euml; nga historit&euml; m&euml; t&euml; dhunshme p&euml;r kontrollin e tregtis&euml; s&euml; g&euml;zofit. Historia e Frontier tregon për Declan Harp, nj&euml; i jasht&euml;ligjsh&euml;m, i cili b&euml;n fushat&euml; p&euml;r t&euml; shtypur monopolin e nj&euml; kompanie p&euml;r tregtin&euml; e g&euml;zofit n&euml; Kanada.</p>
- </div>
-</div>
+      <section class="video-info">
+        <h2>Frontier</h2>
+        <p>Tregtia e g&euml;zofit n&euml; fund t&euml; viteve 1700 ishte nj&euml; koh&euml; lakmie, dhune dhe ambicie. Seriali Game of Thrones, seriali Turn, jan&euml; histori t&euml; dhunshme, por edhe Frontier tregon nj&euml; nga historit&euml; m&euml; t&euml; dhunshme p&euml;r kontrollin e tregtis&euml; s&euml; g&euml;zofit. Historia e Frontier tregon për Declan Harp, nj&euml; i jasht&euml;ligjsh&euml;m, i cili b&euml;n fushat&euml; p&euml;r t&euml; shtypur monopolin e nj&euml; kompanie p&euml;r tregtin&euml; e g&euml;zofit n&euml; Kanada.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-copyright">
+        <p>Copyright &copy; and &reg; Since
+          <script>
+            document.write(new Date().toLocaleDateString())
+          </script>
+        </p>
+      </div>
+    </footer>
+  </div>
 
 </body>
 </html>

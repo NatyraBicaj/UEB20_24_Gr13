@@ -1,48 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Bridgerton
-</title>
-<style>
- body {
-    background-color: #000;
-    color: blueviolet;
-    font-family: Arial, sans-serif;
- }
+  <title>Bridgerton</title>
+  <style>
+    body {
+      background-color: #000;
+      color: blueviolet;
+      font-family: Arial, sans-serif;
+    }
 
- .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
- }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
- .video-player {
-    width: 100%;
-    height: 450px;
- }
+    .video-player {
+      width: 100%;
+      height: 450px;
+    }
 
- .video-info {
-    margin-top: 20px;
- }
-</style>
+    .video-info {
+      margin-top: 20px;
+    }
+
+    .footer-copyright{
+        text-align: center;
+        color:white;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
- <h1>Bridgerton</h1>
+  <div class="container">
+    <header>
+      <h1>Bridgerton</h1>
+    </header>
 
- <div class="video-player">
-    <video width="100%" height="450" controls>
-      <source src="videos/Bridgerton Season 2 _ Official Teaser _ Netflix.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
- </div>
+    <article>
+      <div class="video-player">
+        <video width="100%" height="450" controls poster="path/to/poster-image.jpg">
+          <source src="videos/Bridgerton Season 2 _ Official Teaser _ Netflix.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
- <div class="video-info">
-    <h2>Bridgerton</h2>
-    <p>Gjat&euml; periudh&euml;s monarke n&euml; Angli, v&euml;llez&euml;rit e motrat e familjes s&euml; fuqishme Bridgerton p&euml;rpiqen të gjejn&euml; dashurin&euml;.</p>
- </div>
-</div>
+      <section class="video-info">
+        <h2>Bridgerton</h2>
+        <p>Gjat&euml; periudh&euml;s monarke n&euml; Angli, v&euml;llez&euml;rit e motrat e familjes s&euml; fuqishme Bridgerton p&euml;rpiqen të gjejn&euml; dashurin&euml;.</p>
+      </section>
+    </article>
+
+    <footer>
+        <div class="footer-copyright">
+            <p>Copyright &copy; and &reg; Since
+                <script>
+                    document.write(new Date().toLocaleDateString())
+                  </script> 
+          </div>
+    </footer>
+  </div>
 
 </body>
 </html>

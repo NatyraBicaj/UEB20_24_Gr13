@@ -1,47 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>The Walking Dead</title>
-<style>
- body {
-    background-color: #000;
-    color: blueviolet;
-    font-family: Arial, sans-serif;
- }
+  <title>The Walking Dead</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: blueviolet;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
 
- .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
- }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
- .video-player {
-    width: 100%;
-    height: 450px;
- }
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
 
- .video-info {
-    margin-top: 20px;
- }
-</style>
+    .video-player {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .video-info {
+      margin-top: 20px;
+    }
+
+    .footer-copyright{
+        text-align: center;
+        color:white;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
- <h1>The Walking Dead</h1>
+  <div class="container">
+    <header>
+      <h1>The Walking Dead</h1>
+    </header>
 
- <div class="video-player">
-    <video width="100%" height="450" controls>
-      <source src="videos/The Walking Dead Trailer (First Season).mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
- </div>
+    <main>
+      <div class="video-player">
+        <video width="100%" height="auto" controls poster="path/to/poster-image.jpg">
+          <source src="videos/The Walking Dead Trailer (First Season).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
- <div class="video-info">
-    <h2>The Walking Dead</h2>
-    <p>Me Morganin n&euml; zon&euml;n e sigurt, Rik dhe t&euml; tjer&euml;t mendojn&euml; nj&euml; plan p&euml;r t&euml; larguar nj&euml; turm&euml; t&euml; infektuarish nga Aleksandria, por di&ccedil;ka e v&euml; gjith&euml; komunitetin n&euml; rrezik.</p>
- </div>
-</div>
+      <section class="video-info">
+        <h2>The Walking Dead</h2>
+        <p>Me Morganin n&euml; zon&euml;n e sigurt, Rik dhe t&euml; tjer&euml;t mendojn&euml; nj&euml; plan p&euml;r t&euml; larguar nj&euml; turm&euml; t&euml; infektuarish nga Aleksandria, por di&ccedil;ka e v&euml; gjith&euml; komunitetin n&euml; rrezik.</p>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-copyright">
+          <p>Copyright &copy; and &reg; Since
+              <script>
+                  document.write(new Date().toLocaleDateString())
+                </script> 
+        </div>
+  </footer>
+  </div>
 
 </body>
 </html>

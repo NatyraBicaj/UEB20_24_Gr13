@@ -1,47 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Squid Game</title>
-<style>
- body {
-    background-color: #000;
-    color: blueviolet;
-    font-family: Arial, sans-serif;
- }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squid Game</title>
+  <style>
+    body {
+      background-color: #000;
+      color: blueviolet;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
 
- .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
- }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
- .video-player {
-    width: 100%;
-    height: 450px;
- }
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
 
- .video-info {
-    margin-top: 20px;
- }
-</style>
+    .video-player {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .video-info {
+      margin-top: 20px;
+    }
+
+    .footer-copyright{
+        text-align: center;
+        color:white;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
- <h1>Squid Game</h1>
+  <div class="container">
+    <header>
+      <h1>Squid Game</h1>
+    </header>
 
- <div class="video-player">
-    <video width="100%" height="450" controls>
-      <source src="videos/Squid Game _ Official Trailer _ Netflix.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
- </div>
+    <main>
+      <div class="video-player">
+        <video width="100%" height="auto" controls poster="path/to/poster-image.jpg">
+          <source src="videos/Squid Game _ Official Trailer _ Netflix.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
- <div class="video-info">
-    <h2>Squid Game</h2>
-    <p>Disa lojtar&euml; pranojn&euml; nj&euml; ftes&euml; p&euml;r t&euml; konkurruar në sfid&euml;n e litarit n&euml; k&euml;mbim t&euml; nj&euml; &ccedil;mimi josh&euml;s, por pasojat janë&euml; vdekjeprur&euml;se.</p>
- </div>
-</div>
+      <section class="video-info">
+        <h2>Squid Game</h2>
+        <p>Disa lojtar&euml; pranojn&euml; nj&euml; ftes&euml; p&euml;r t&euml; konkurruar në sfid&euml;n e litarit n&euml; k&euml;mbim t&euml; nj&euml; &ccedil;mimi josh&euml;s, por pasojat janë&euml; vdekjeprur&euml;se.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-copyright">
+          <p>Copyright &copy; and &reg; Since
+              <script>
+                  document.write(new Date().toLocaleDateString())
+                </script> 
+        </div>
+  </footer>
+  </div>
 
 </body>
 </html>

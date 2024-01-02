@@ -25,12 +25,26 @@
                 <input type="checkbox" class="form-check-input" id="remember">
                 <label for="remember" class="form-check-label text-secondary">Ruaj</label>
             </div>
-            <button type="submit" class="btn btn-login w-100 mb-3" style="background-color: rgb(162, 101, 220); border-color: rgb(162, 101, 220); padding: 0.5rem 2rem; font-size: 1rem; color: #ffffff;">Qasja</button>
+            
+            <button type="button" class="btn btn-login w-100 mb-3" style="background-color: rgb(162, 101, 220); border-color: rgb(162, 101, 220); padding: 0.5rem 2rem; font-size: 1rem; color: #ffffff;" onclick="Timeout()">Qasja</button>
         </form>
 
         <div class="text-center">
             <small>Nuk keni nj&euml; llogari? <a href="Regjistrimi.html" class="btn-link fw-bold" style="color: rgb(162, 101, 220); text-decoration: none;">Regjistrohu</a></small>
         </div>
     </div>
+
+    <script>
+        function Timeout() {
+            var count = 0;
+            
+            for (var i = 0; i < 5; i++) {
+                setTimeout(function () {
+                    count++;
+                    alert('Butoni eshte klikuar pas ' + count * 2 + ' sekondash!');
+                }, i * 2000);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -226,7 +226,7 @@
       const message = document.getElementById("message");
       let alphabets = /^[A-Za-z]+$/ ; 
       if (firstname.value.trim().length === 0 && lastname.value.trim().length === 0 && email.value.trim().length === 0 && phone.value.trim().length === 0 && subject.value.trim().length === 0 && message.value.trim().length === 0  ){
-       swal("Oops..." , "Ju lutem! S&euml; pari plot&euml;soni fushat ." , "error"); 
+       swal("Oops..." , "Ju lutem! Se pari plotesoni fushat ." , "error"); 
         return false ; 
       }
       if (firstname.value.trim().length === 0 ) {
@@ -234,12 +234,12 @@
         return false ; 
       }
       if (!firstname.value.trim().match(alphabets) ){
-        swal("Oops..." , "Ju lutem! Shkruani n&euml; em&euml;r valid ." , "error"); 
+        swal("Oops..." , "Ju lutem! Shkruani nje emer valid ." , "error"); 
         return false; 
       }
       if(lastname.value.trim().length > 0 ) {
         if (!lastname.value.trim().match(alphabets) ){
-        swal("Oops..." , "Ju lutem! Shkruani nj&euml; mbiem&euml;r valid ." , "error"); 
+        swal("Oops..." , "Ju lutem! Shkruani nje; mbiemer valid ." , "error"); 
         return false; 
         }
       }
@@ -248,11 +248,11 @@
         return false ; 
       }
       if (!email.value.trim().includes("@gmail.com")) {
-        swal("Oops..." , "Ju lutem! Shkruani nj&euml; email valid ." , "error"); 
+        swal("Oops..." , "Ju lutem! Shkruani nje email valid ." , "error"); 
         return false ; 
       }
       if ( phone.value.trim().length != 9 ||  isNaN(phone.value.trim()) ) {
-        swal("Oops..." , "Numri i telefonit duhet t&euml; ket&euml; 9 numra . " , "error"); 
+        swal("Oops..." , "Numri i telefonit duhet te kete 9 numra . " , "error"); 
         return false ; 
       }
       if (subject.value.trim().length === 0 ) {
@@ -263,7 +263,7 @@
         swal("Oops..." , "Ju lutem! Shkruani mesazhin tuaj ." , "error"); 
         return false ; 
       }
-      swal("Sukses!", "Mesazhi &euml;sht&euml; d&euml;rguar me sukses! Faleminderit p&euml;r koh&euml;n tuaj", "success");
+      swal("Sukses!", "Mesazhi eshte derguar me sukses! Faleminderit per kohen tuaj", "success");
       return true ; 
     }
 

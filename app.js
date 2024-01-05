@@ -101,15 +101,15 @@ dragPhoto.addEventListener('mousedown', function(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
   try {
-    var filmatLink = document.getElementById("filmat-link");
+      var filmatDropdown = document.getElementById("filmat-dropdown");
 
-    if (filmatLink) {
-      filmatLink.addEventListener("click", function() {
-        window.location.href = "filmat.html";
-      });
-    }
+      if (filmatDropdown) {
+          filmatDropdown.addEventListener("click", function() {
+              window.location.href = "filmat.html";
+          });
+      }
   } catch (error) {
-    console.error(`Error occurred: ${error.message}`);
+      console.error(`Error occurred: ${error.message}`);
   }
 });
 

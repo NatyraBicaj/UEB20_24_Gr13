@@ -125,6 +125,16 @@ button:hover {
     margin-right: 30px;
 
 }
+
+.highlight {
+    background-color: rgb(7, 7, 6);
+    display: inline-block;
+    transition: background-color 0.5s ease; 
+}
+  .highlight:hover {
+    background-color: transparent; 
+  }
+  
 .movie-list-item:hover .movie-list-item-img{
     transform: scale(1,2);
 }
@@ -608,4 +618,4 @@ button:hover {
         background-color: black;
         border-radius: 10px;
       }
-
+     

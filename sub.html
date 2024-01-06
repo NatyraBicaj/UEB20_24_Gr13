@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subscription form</title>
+
+   
+    <style>
+      body {
+            margin: 20;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; 
+            color: #fff; 
+
+      }
+      .subscription-form {
+            max-width: 550px; 
+            height:150;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            color: #260626; 
+            background-color:rgba(14, 2, 10, 0.434);
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+       input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            display: inline-block; 
+        }
+
+        button {
+            background-color: #8b5bbe;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block; 
+        }
+        
+    </style>
+</head>
+<body>
+<div class="subscription-form">
+    <h2>Abonohuni tek ne</h2>
+    <form action="submit_subscription" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><button type="submit">Abonohu</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -10,8 +10,21 @@
     <title>MovieSite</title>
 </head>
 <body>
+    <div id="pop-up-wrapper" class="popup-overlay">
+        <div class="pop-up-box">
+            <img src="https://assets-global.website-files.com/62b35b7d81be197b4ed2ee6c/62b35b8081be1929cdd2ee85_Exit%20Icon.svg" width="18" alt="Exit button" class="pop-up-exit-button" onclick="closePopup()">
+            <div class="pop-up-text-box">
+                <h2 class="pop-up-header">Abonohuni për më të rejat nga bota e filmit</h2>
+                <p class="pop-up-paragraph"><em>Nëse dëshironi të<span class="text-span-35"> na ndiqni për të marrë informacionin më të fundit</span> ,ju lutem shkruani emailin tuaj  më poshtë ose klikoni këtë link:</em></p>
+                <a href="mailto:info@movie.com" id="email-link">Kliko për të dërguar emailin.</a>
+            </div>
+            <iframe src="sub.html" width="100%" height="70%" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script src="sub.js"></script>
     <div id="dateTime" style="font-size: 18px; font-family: Arial, sans-serif;color: white;"></div>
     <script src="data.js"></script>
+
     
     <label for="movie">Choose a movie:</label>
       <input type="text" id="movie" name="movie" list="movies" placeholder="Search..."
@@ -83,7 +96,6 @@
                 </div>
                 </div>
                 <br>
-                <a href="mailto:info@example.com">Dërgo email</a>
                 <h2><abbr title="Me të rejat nga filmat">M&Euml; T&Euml; REJAT</abbr></h2>
                 <marquee behavior="alternate" direction="left" scrollamount="5"scrolldelay="20">
                   <div class="series-list-container">

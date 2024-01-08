@@ -70,7 +70,7 @@
                 </div>
                 </div>
                 <br>
-                <h2><abbr title="Me të rejat nga filmat">M&Euml; T&Euml; REJAT</abbr></h2>
+                <h2>M&Euml; T&Euml; REJAT</h2>
                 <marquee behavior="alternate" direction="left" scrollamount="5"scrolldelay="20">
                   <div class="series-list-container">
                       <h1 class="series-list-title" id="meterejat" ></h1>
@@ -680,26 +680,5 @@
         }
       </script>
       <script src="app.js"></script>
-      <script>
-          $(document).ready(function () {
-            var scrollTopButton = document.getElementById("scrollToTopButton");
-            window.onscroll = function () {
-              scrollFunction()
-            };
-        
-            function scrollFunction() {
-              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollTopButton.style.display = "block";
-              } else {
-                scrollTopButton.style.display = "none";
-              }
-            }
-            $("#scrollToTopButton").click(function () {
-              $('html ,body').animate({
-                scrollTop: 0
-              }, 800)
-            });
-          });
-        </script>
   </body>
   </html>

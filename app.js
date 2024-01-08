@@ -1,29 +1,33 @@
-const arrows = document.querySelectorAll(".arrow");
-const movieLists = document.querySelectorAll(".movie-list");
+$(document).ready(function () {
+  const arrows = $(".arrow");
+  const movieLists = $(".movie-list");
 
-arrows.forEach((arrow, i) => {
-  try {
-    const itemNumber = movieLists[i].querySelectorAll("img").length;
-    let clickCounter = 0;
-    arrow.addEventListener("click", () => {
-      const ratio = Math.floor(window.innerWidth / 270);
-      clickCounter++;
-      if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
-        movieLists[i].style.transform = `translateX(${
-          movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
-        }px)`;
-      } else {
-        movieLists[i].style.transform = "translateX(0)";
-        clickCounter = 0;
-      }
-    });
+  arrows.each(function (i) {
+    try {
+      const itemNumber = $(movieLists[i]).find("img").length;
+      let clickCounter = 0;
 
-    console.log(Math.floor(window.innerWidth / 270));
-  } catch (error) {
-    console.error(`Error occurred: ${error.message}`);
-  }
+      $(this).on("click", function () {
+        const ratio = Math.floor(window.innerWidth / 270);
+        clickCounter++;
+        const transformValue = $(movieLists[i]).css("transform") !== "none" ?
+          parseInt($(movieLists[i]).css("transform").match(/-?\d+/)[0]) :
+          0;
+
+        if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
+          $(movieLists[i]).css("transform", `translateX(${transformValue - 300}px)`);
+        } else {
+          $(movieLists[i]).css("transform", "translateX(0)");
+          clickCounter = 0;
+        }
+      });
+
+      console.log(Math.floor(window.innerWidth / 270));
+    } catch (error) {
+      console.error(`Error occurred: ${error.message}`);
+    }
+  });
 });
-
 $(document).ready(function() {
   try {
     $('.show-details1').click(function() {
@@ -68,49 +72,22 @@ $(document).ready(function() {
   }
 });
 
-const dragPhoto = document.getElementById('dragPhoto');
-let isDragging = false;
+$(document).ready(function () {
+  var $scrollTopButton = $("#scrollToTopButton");
 
-dragPhoto.addEventListener('mousedown', function(event) {
-  try {
-    isDragging = true;
-    dragPhoto.style.cursor = 'grabbing';
-    const offsetX = event.clientX - dragPhoto.getBoundingClientRect().left;
-    const offsetY = event.clientY - dragPhoto.getBoundingClientRect().top;
-
-    document.addEventListener('mousemove', dragElement);
-    document.addEventListener('mouseup', function() {
-      isDragging = false;
-      dragPhoto.style.cursor = 'grab';
-      document.removeEventListener('mousemove', dragElement);
-      dragPhoto.style.transition = 'transform 0.3s ease-in-out';
-      dragPhoto.style.transform = 'translate(0, 0)';
-    });
-
-    function dragElement(event) {
-      if (isDragging) {
-        const x = event.clientX - offsetX;
-        const y = event.clientY - offsetY;
-        dragPhoto.style.transform = `translate(${x}px, ${y}px)`;
-      }
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 20) {
+      $scrollTopButton.fadeIn();
+    } else {
+      $scrollTopButton.fadeOut();
     }
-  } catch (error) {
-    console.error(`Error occurred: ${error.message}`);
-  }
-});
+  });
 
-document.addEventListener("DOMContentLoaded", function() {
-  try {
-      var filmatDropdown = document.getElementById("filmat-dropdown");
-
-      if (filmatDropdown) {
-          filmatDropdown.addEventListener("click", function() {
-              window.location.href = "filmat.html";
-          });
-      }
-  } catch (error) {
-      console.error(`Error occurred: ${error.message}`);
-  }
+  $scrollTopButton.click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800);
+  });
 });
 
 

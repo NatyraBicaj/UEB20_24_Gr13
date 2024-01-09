@@ -270,5 +270,36 @@
         <br><br>
      </div>   
     </div>
+    <script>
+        
+        const listofTopRatingfilms = [
+            { titulli: "The Godfather", viti: 1972, vleresimi: 9.2, boxOffice: 134970000 },
+            { titulli: "The Shawshank Redemption", viti: 1994, vleresimi: 9.3, boxOffice:  28340000 },
+            { titulli: "The Godfather Part II", viti: 1974, vleresimi: 9.0, boxOffice: 57300000 },
+            { titulli: "Inception", viti: 2010, vleresimi: 8.8, boxOffice: 292580000 },
+            { titulli: "Fight Club", viti: 1999, vleresimi: 8.8, boxOffice: 37030000},
+            { titulli: "The Dark Knight", viti: 2008, vleresimi: 9.0, boxOffice: 534860000},
+            { titulli: "12 Angry Man", viti: 1957, vleresimi: 9.0, boxOffice: 4360000},
+            { titulli: "The Lord of the Rings: The Fellowship of the Ring", viti: 2001, vleresimi: 8.9, boxOffice: 315540000},
+            { titulli: "The Matrix", viti: 1999, vleresimi: 8.7, boxOffice: 171480000},
+            { titulli: "Seven", viti: 1995, vleresimi: 8.6, boxOffice: 100130000}
+        ];
+
+        
+        const titujtEFilmave = listofTopRatingfilms.map(film => film.titulli);
+        console.log("Titujt e filmave:", titujtEFilmave);
+
+        console.log("Lista e Top filmave me të vlerësuar:", listofTopRatingfilms);
+
+        const filmatMeVleresimTeLarte = listofTopRatingfilms.filter(film => film.vleresimi > 9.0);
+        console.log("Filmat me vlerësim mbi 9:", filmatMeVleresimTeLarte);
+
+        const shumaEBoxOffice = listofTopRatingfilms.map(film => film.boxOffice).reduce((akumulator, vlera) => akumulator + vlera, 0);
+        console.log("Shuma e të ardhurave të box-office të këtyre filmave:", shumaEBoxOffice);
+
+         const teksti = "Si referencë të këtyre të dhënave e kemi marrë faqen https://www.imdb.com/";
+
+        console.log(teksti);
+    </script>
 </body>
 </html>

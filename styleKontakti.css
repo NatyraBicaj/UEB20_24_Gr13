@@ -2,7 +2,6 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    
   }
   body {
     background: black;
@@ -74,6 +73,7 @@ button:hover {
     color: white;
     text-align: center;
     z-index: 1;
+    background-origin: border-box;
 }
 
   .text {

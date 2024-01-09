@@ -271,8 +271,33 @@
      </div>   
     </div>
     <script>
-        
-        const listofTopRatingfilms = [
+            
+            function Film(titulli, viti, vleresimi, boxOffice) {
+                this.titulli = titulli;
+                this.viti = viti;
+                this.vleresimi = vleresimi;
+                this.boxOffice = boxOffice;
+                     }
+
+             
+            const filmi1 = new Film("The Godfather", 1972, 9.2, 134970000);
+            const filmi2 = new Film("The Shawshank Redemption", 1994, 9.3, 28340000);
+            const filmi3 = new Film("The Godfather Part II", 1974, 9.0, 57300000);
+            const filmi4 = new Film("Inception", 2010, 8.8, 292580000);
+            const filmi5 = new Film("Fight Club", 1999, 8.8, 37030000);
+            const filmi6 = new Film("The Dark Knight", 2008, 9.0, 534860000);
+            const filmi7 = new Film("12 Angry Man", 1957, 9.0, 4360000);
+            const filmi8 = new Film("The Lord of the Rings: The Fellowship of the Ring", 2001, 8.9, 315540000);
+            const filmi9 = new Film("The Matrix", 1999, 8.7, 171480000);
+            const filmi10 = new Film("Seven", 1995, 8.6, 100130000);
+
+           
+            const listaFilmave = [filmi1, filmi2, filmi3, filmi4, filmi5, filmi6, filmi7, filmi8, filmi9, filmi10];
+
+           
+            console.log("Lista e Top filmave më të vlerësuar me objekte:", listaFilmave);
+
+            const listofTopRatingfilms = [
             { titulli: "The Godfather", viti: 1972, vleresimi: 9.2, boxOffice: 134970000 },
             { titulli: "The Shawshank Redemption", viti: 1994, vleresimi: 9.3, boxOffice:  28340000 },
             { titulli: "The Godfather Part II", viti: 1974, vleresimi: 9.0, boxOffice: 57300000 },
@@ -288,8 +313,6 @@
         
         const titujtEFilmave = listofTopRatingfilms.map(film => film.titulli);
         console.log("Titujt e filmave:", titujtEFilmave);
-
-        console.log("Lista e Top filmave me të vlerësuar:", listofTopRatingfilms);
 
         const filmatMeVleresimTeLarte = listofTopRatingfilms.filter(film => film.vleresimi > 9.0);
         console.log("Filmat me vlerësim mbi 9:", filmatMeVleresimTeLarte);

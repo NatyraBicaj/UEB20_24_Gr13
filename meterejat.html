@@ -5,75 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Me te rejat</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: rgb(23, 23, 23);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+       body {
+        font-family: 'Arial', sans-serif;
+        background-color: rgb(23, 23, 23);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
 
-        h1 {
-            text-align: center;
-            color: blueviolet;
-            font-size: 2em; 
-            margin-bottom: 20px; 
-            margin-left: 10px;
-            text-shadow: 2px 2px 4px white; 
-        }
+    form {
+        text-align: center;
+        width: 30%; /* Increased form width */
+        margin-left: 70px;
+        background-color: #2c3e50; /* Dark background color */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow for a card-like effect */
+    }
 
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: rgb(195, 164, 224);
-            box-shadow: 0 4px 8px white;
-        }
+    label {
+        color: white;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
+    #movieInput {
+        width: 100%; /* Full width input */
+        padding: 12px;
+        box-sizing: border-box;
+        border: 2px solid #3498db; /* Blue border */
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        margin-bottom: 15px;
+        background-color: #ecf0f1; /* Light background color */
+    }
 
-        th {
-            background-color: rgb(162, 101, 220);
-        }
+    #movieInput:focus {
+        border-color: #e74c3c; /* Red border on focus */
+    }
 
-        tr:hover {
-            background-color: #f5f5f5;
-        }
+    #submitBtn {
+        background-color: #e74c3c; /* Red button color */
+        color: #fff;
+        padding: 15px 25px;
+        font-size: 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-        .details {
-            display: none;
-            background-color: #fff;
-            box-shadow: 0 0 10px white;
-            margin-top: 10px;
-        }
+    #submitBtn:hover {
+        background-color: #c0392b; /* Darker red on hover */
+    }
 
-        .details th, .details td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
+    h1 {
+        text-align: center;
+        color: blueviolet;
+        font-size: 2em;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        text-shadow: 2px 2px 4px white;
+    }
 
-        .details th {
-            background-color: #f2f2f2;
-        }
+    table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: rgb(195, 164, 224);
+        box-shadow: 0 4px 8px white;
+    }
 
-        .details td:first-child {
-            font-weight: bold;
-        }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
 
-        .details-btn {
-            cursor: pointer;
-            color: black;
-            text-decoration: underline;
-        }
+    th {
+        background-color: rgb(162, 101, 220);
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .details {
+        display: none;
+        background-color: #fff;
+        box-shadow: 0 0 10px white;
+        margin-top: 10px;
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    .details th, .details td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .details th {
+        background-color: #f2f2f2;
+    }
+
+    .details td:first-child {
+        font-weight: bold;
+    }
+
+    .details-btn {
+        cursor: pointer;
+        color: black;
+        text-decoration: underline;
+    }
     </style>
 </head>
 <body>
@@ -309,5 +359,73 @@
         }
     </script>
 
+<form onsubmit="submitForm(); return false;">
+    <label for="movieInput">Shkruaj per të parë detajet e filmave me te rinjë:</label>
+    <input type="text" id="movieInput" name="movieInput" list="movies" placeholder="Shkruaj ose selekto një film" required>
+    <datalist id="movies">
+        <option value="What if...?">
+        <option value="Aquaman and the Lost Kingdom">
+        <option value="Anyone But You">
+        <option value="Percy Jackson and the Olympians">
+        <option value="Rebel Moon - Part One: A Child of Fire">
+        <option value="Reacher">
+        <option value="Wonka">
+        <option value="Poor Things">
+        <option value="Leave The World Behind">
+        <option value="Saltburn">
+    </datalist>
+    <input type="submit" value="See Details">
+</form>
+
+
+
+<script>
+    function showDetails(movieId) {
+        var detailsElement = document.getElementById('details' + movieId);
+        detailsElement.style.display = detailsElement.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function submitForm() {
+        var userInput = document.getElementById('movieInput').value;
+
+      
+        switch (userInput) {
+            case 'What if...?':
+            showDetails(1)
+                break;
+            case 'Aquaman and the Lost Kingdom':
+            showDetails(2)
+                break;
+            case 'Anyone But You':
+            showDetails(3)
+                break;
+            case 'Percy Jackson and the Olympians':
+            showDetails(4)
+                break;
+            case 'Rebel Moon - Part One: A Child of Fire':
+            showDetails(5)
+                break;
+            case 'Reacher':
+            showDetails(6)
+                break;
+            case 'Wonka':
+            showDetails(7)
+                break;
+            case 'Poor Things':
+            showDetails(8)
+                break;
+            case 'Leave The World Behind':
+            showDetails(9)
+                break;
+            case 'Saltburn':
+            showDetails(10)
+                break;
+            default:
+                
+                alert('Më falni,nuk gjinden të dhëna për: ' + userInput);
+                break;
+        }
+    }
+</script>
 </body>
 </html>

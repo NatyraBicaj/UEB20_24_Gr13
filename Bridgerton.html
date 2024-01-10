@@ -29,6 +29,25 @@
         text-align: center;
         color:white;
     }
+    #showTitle {
+      font-size: 24px;
+      color: white;
+      font-style: italic;
+    }
+
+    #userRatings {
+      font-size: 15px;
+      color: white;
+      
+    }
+
+    #averageRating {
+      font-size: 15px;
+      color: white;
+      
+    }
+
+    
   </style>
 </head>
 <body>
@@ -49,8 +68,33 @@
         <h2>Bridgerton</h2>
         <p>Gjat&euml; periudh&euml;s monarke n&euml; Angli, v&euml;llez&euml;rit e motrat e familjes s&euml; fuqishme Bridgerton p&euml;rpiqen të gjejn&euml; dashurin&euml;.</p>
       </section>
-    </article>
+    </article>  
+                <h3 id="showTitle"></h3>
+                <p id="userRatings"></p>
+                <p id="averageRating"></p>
 
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+              
+                const showTitle = "Bridgerton";
+                const userRatings = [5, 4, 4, 5, 5];
+
+                
+                const averageRating = calculateAverageRating(userRatings);
+
+                
+                document.getElementById('showTitle').innerText = `Detaje te tjera: ${showTitle}`;
+                document.getElementById('userRatings').innerText = `Vleresimet e shikuesve: ${userRatings.join(', ')}`;
+                document.getElementById('averageRating').innerText = `Mesatarja e vleresimit: ${averageRating.toFixed(2)}`;
+
+                
+                function calculateAverageRating(ratings) {
+                  const sum = ratings.reduce((total, rating) => total + rating, 0);
+                  const average = sum / ratings.length;
+                  return average;
+                }
+              });
+            </script>
     <footer>
         <div class="footer-copyright">
             <p>Copyright &copy; and &reg; Since

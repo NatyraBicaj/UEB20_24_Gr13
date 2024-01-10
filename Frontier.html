@@ -42,6 +42,23 @@
         text-align: center;
         color:white;
     }
+    #showTitle {
+      font-size: 24px;
+      color: white;
+      font-style: italic;
+    }
+
+    #userRatings {
+      font-size: 15px;
+      color: white;
+      
+    }
+
+    #averageRating {
+      font-size: 15px;
+      color: white;
+      
+    }
   </style>
 </head>
 <body>
@@ -62,6 +79,29 @@
         <h2>Frontier</h2>
         <p>Tregtia e g&euml;zofit n&euml; fund t&euml; viteve 1700 ishte nj&euml; koh&euml; lakmie, dhune dhe ambicie. Seriali Game of Thrones, seriali Turn, jan&euml; histori t&euml; dhunshme, por edhe Frontier tregon nj&euml; nga historit&euml; m&euml; t&euml; dhunshme p&euml;r kontrollin e tregtis&euml; s&euml; g&euml;zofit. Historia e Frontier tregon për Declan Harp, nj&euml; i jasht&euml;ligjsh&euml;m, i cili b&euml;n fushat&euml; p&euml;r t&euml; shtypur monopolin e nj&euml; kompanie p&euml;r tregtin&euml; e g&euml;zofit n&euml; Kanada.</p>
       </section>
+      <h3 id="showTitle"></h3>
+      <p id="userRatings"></p>
+      <p id="averageRating"></p>
+  
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+  
+              const showTitle = "Frontier";
+              const userRatings = [3, 4, 3, 5, 4];
+  
+              const averageRating = calculateAverageRating(userRatings);
+  
+              document.getElementById('showTitle').innerText = `Detaje te tjera: ${showTitle}`;
+              document.getElementById('userRatings').innerText = `Vleresimet e shikuesve: ${userRatings.join(', ')}`;
+              document.getElementById('averageRating').innerText = `Mesatarja e vleresimit: ${averageRating.toFixed(2)}`;
+  
+              function calculateAverageRating(ratings) {
+                  const sum = ratings.reduce((total, rating) => total + rating, 0);
+                  const average = sum / ratings.length;
+                  return average;
+              }
+          });
+      </script>
     </main>
 
     <footer>

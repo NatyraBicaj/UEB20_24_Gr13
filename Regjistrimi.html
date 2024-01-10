@@ -19,8 +19,8 @@
         }
 
         :root {
-            --primary-color: rgb(137, 58, 210);
-            --primary-dark-color: rgb(93, 36, 146);
+            --primary-color: rgb(93, 36, 146);
+            --primary-dark-color: rgb(26, 14, 37);
             --white-color: #fff;
         }
 
@@ -215,8 +215,10 @@
                     <input type="email" id="email" placeholder="Shkruani email" required>
                 </div>
                 <div class="form-control">
-                    <label for="birthday">Dit&euml;lindja</label>
-                    <input type="birthday" id="birthday" placeholder="Shkruani dit&euml;lindjen" pattern="\d{2}-\d{2}-\d{4}" required>
+                    <label for="birthday">Ditëlindja</label>
+                    <input type="birthday" id="birthday" placeholder="Shkruani ditëlindjen (DD-MM-YYYY)"
+                        pattern="\d{2}-\d{2}-\d{4}" required>
+                    <small style="color: white;">Formati i duhur: DD-MM-YYYY</small>
                 </div>
                 <div style="color:white">
                     <label for="gender">Gjinia:</label>

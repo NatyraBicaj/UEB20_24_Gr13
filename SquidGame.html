@@ -38,6 +38,23 @@
         text-align: center;
         color:white;
     }
+    #showTitle {
+      font-size: 24px;
+      color: white;
+      font-style: italic;
+    }
+
+    #userRatings {
+      font-size: 15px;
+      color: white;
+      
+    }
+
+    #averageRating {
+      font-size: 15px;
+      color: white;
+      
+    }
   </style>
 </head>
 <body>
@@ -58,6 +75,29 @@
         <h2>Squid Game</h2>
         <p>Disa lojtar&euml; pranojn&euml; nj&euml; ftes&euml; p&euml;r t&euml; konkurruar në sfid&euml;n e litarit n&euml; k&euml;mbim t&euml; nj&euml; &ccedil;mimi josh&euml;s, por pasojat janë&euml; vdekjeprur&euml;se.</p>
       </section>
+      <h3 id="showTitle"></h3>
+      <p id="userRatings"></p>
+      <p id="averageRating"></p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const showTitle = "Squid Game";
+            const userRatings = [5, 5, 4, 4, 5];
+
+            const averageRating = calculateAverageRating(userRatings);
+
+            document.getElementById('showTitle').innerText = `Detaje te tjera: ${showTitle}`;
+            document.getElementById('userRatings').innerText = `Vleresimet e shikuesve: ${userRatings.join(', ')}`;
+            document.getElementById('averageRating').innerText = `Mesatarja e vleresimit: ${averageRating.toFixed(2)}`;
+
+            function calculateAverageRating(ratings) {
+                const sum = ratings.reduce((total, rating) => total + rating, 0);
+                const average = sum / ratings.length;
+                return average;
+            }
+        });
+    </script>
     </main>
 
     <footer>

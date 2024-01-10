@@ -38,6 +38,23 @@
         text-align: center;
         color:white;
     }
+    #showTitle {
+      font-size: 24px;
+      color: white;
+      font-style: italic;
+    }
+
+    #userRatings {
+      font-size: 15px;
+      color: white;
+      
+    }
+
+    #averageRating {
+      font-size: 15px;
+      color: white;
+      
+    }
   </style>
 </head>
 <body>
@@ -59,6 +76,29 @@
         <h2>The Flash</h2>
         <p>N&euml;nt&euml; muaj pas S.T.A.R Labs ka shp&euml;rthyer, Barri zgjohet p&euml;r t&euml; gjetur fakte por diçka ka ndodhur q&euml; ai &euml;sht&euml; n&euml; kome, me ndihm&euml;n e miqve t&euml; tij Barri duhet p&euml;rpiqet me forcat e tij t&euml; gjej pronaret e S.T.A.R Labs.</p>
       </section>
+      <h3 id="showTitle"></h3>
+      <p id="userRatings"></p>
+      <p id="averageRating"></p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const showTitle = "The Flash";
+            const userRatings = [4, 5, 4, 3, 5];
+
+            const averageRating = calculateAverageRating(userRatings);
+
+            document.getElementById('showTitle').innerText = `Detaje te tjera: ${showTitle}`;
+            document.getElementById('userRatings').innerText = `Vleresimet e shikuesve: ${userRatings.join(', ')}`;
+            document.getElementById('averageRating').innerText = `Mesatarja e vleresimit: ${averageRating.toFixed(2)}`;
+
+            function calculateAverageRating(ratings) {
+                const sum = ratings.reduce((total, rating) => total + rating, 0);
+                const average = sum / ratings.length;
+                return average;
+            }
+        });
+    </script>
     </main>
 
     <footer>

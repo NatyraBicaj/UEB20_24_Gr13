@@ -428,5 +428,33 @@
         }
     }
 </script>
+<script>
+    const movies = [
+      { titulli: 'The Matrix', kategoria: 'Sci-Fi', vleresimi: 8.7 },
+      { titulli: 'Forrest Gump', kategoria: 'Drama', vleresimi: 8.8 },
+      { titulli: 'The Godfather', kategoria: 'Crime', vleresimi: 9.2 },
+      { titulli: 'Inglourious Basterds', kategoria: 'War', vleresimi: 8.3 },
+      
+    ];
+
+    
+    const filteredMovies = movies.filter(movie => movie.kategoria === 'Drama');
+
+    
+    const movieStrings = filteredMovies.map(movie => {
+      return `Titulli: ${movie.titulli}, Kategoria: ${movie.kategoria}, Vleresimi: ${movie.vleresimi}`;
+    });
+
+    
+    movieStrings.forEach(movieString => {
+      console.log(movieString);
+      console.log('---');
+    });
+
+   
+    
+  </script>
+
+
 </body>
 </html>

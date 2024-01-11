@@ -296,8 +296,39 @@
             }
         }
     </script>
+
+<script>
+    console.log(" Serialet me vleresimin me te larte nepermjet metodave MIN_VALUE dhe toString() ");
+    var serialet = [
+        { titulli: 'Breaking Bad', vleresimi: 9.5 },
+        { titulli: 'Stranger Things', vleresimi: 8.8 },
+        { titulli: 'The Mandalorian', vleresimi: 9.0 },
+        { titulli: 'Game of Thrones', vleresimi: 9.3 },
+    ];
+
+    function findMostRatedTVShow(serialetArray) {
+        var maxRating = Number.MIN_VALUE;
+        var mostRatedTVShow;
+
+        for (var i = 0; i < serialetArray.length; i++) {
+            if (serialetArray[i].vleresimi > maxRating) {
+                maxRating = serialetArray[i].vleresimi;
+                mostRatedTVShow = serialetArray[i];
+            }
+        }
+
+        return mostRatedTVShow;
+    }
+
+    var mostRatedTVShow = findMostRatedTVShow(serialet);
+
+    if (mostRatedTVShow) {
+        console.log('Seriali me vleresimin me te larte eshte:', mostRatedTVShow.titulli);
+        console.log('Vleresimi:', mostRatedTVShow.vleresimi.toString());
+    } else {
+        console.log('Nuk eshte gjetur asnje serial.');
+    }
+</script>
         
-
-
 </body>
 </html>

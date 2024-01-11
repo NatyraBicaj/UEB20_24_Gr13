@@ -72,37 +72,8 @@
                         <p>HD | 2007</p>
                         <p>Animuar/Fantazi/Komedi</p>
                         <p>Vler&euml;simi: 7.4 | 3 sezone</p>
-                        <i id="playButton" class="fas fa-play play-icon" style="cursor: pointer;"></i>
+                        <a href="https://youtu.be/NgsQ8mVkN8w" target="_blank"><i class="fas fa-play play-icon"></i></a>
                     </div>
-
-                     <script>
-                     document.getElementById('playButton').addEventListener('click', function() {
-                     console.log('Button clicked');
-
-                     var videoElement = document.createElement('video');
-                     videoElement.width = 640;
-                     videoElement.height = 360;
-                     videoElement.controls = true;
-                     videoElement.style.position = 'absolute';
-                     videoElement.style.zIndex = '1';
-
-                     
-                     var sourceElement = document.createElement('source');
-                     sourceElement.src = 'videos/video.mp4';
-                     sourceElement.type = 'video/mp4';
-
-                     
-                     videoElement.appendChild(sourceElement);
-
-                     
-                     var detailsElement = document.querySelector('.details');
-                     detailsElement.replaceWith(videoElement);
-
-                     
-                     videoElement.play();
-                     });
-
-                     </script>
                 </div>
                 <div class="card">
                     <img src="img/a2.webp">

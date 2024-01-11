@@ -7,13 +7,21 @@ dragPhoto.addEventListener('mousedown', function(event) {
   const offsetX = event.clientX - dragPhoto.getBoundingClientRect().left;
   const offsetY = event.clientY - dragPhoto.getBoundingClientRect().top;
 
+  // Set transition property before dragging starts
+  dragPhoto.style.transition = 'transform 0.3s ease-in-out';
+
   document.addEventListener('mousemove', dragElement);
   document.addEventListener('mouseup', function() {
     isDragging = false;
     dragPhoto.style.cursor = 'grab';
+
     document.removeEventListener('mousemove', dragElement);
-    dragPhoto.style.transition = 'transform 0.3s ease-in-out';
-    dragPhoto.style.transform = 'translate(0, 0)';
+
+    // Delay setting the transform property until after the transition is applied
+    setTimeout(() => {
+      dragPhoto.style.transition = '';
+      dragPhoto.style.transform = 'translate(0, 0)';
+    }, 0);
   });
 
   function dragElement(event) {

@@ -324,5 +324,35 @@
 
         console.log(teksti);
     </script>
+        <div id="dragContainer">
+            <div id="draggableElement" draggable="true">Drag me!</div>
+          </div>
+          <br><br><br>
+          <script>
+            const draggableElement = document.getElementById('draggableElement');
+            let offsetX, offsetY, isDragging = false;
+          
+            draggableElement.addEventListener('dragstart', function (event) {
+              offsetX = event.clientX - draggableElement.getBoundingClientRect().left;
+              offsetY = event.clientY - draggableElement.getBoundingClientRect().top;
+              isDragging = true;
+              draggableElement.style.cursor = 'grabbing';
+            });
+          
+            document.addEventListener('mousemove', function (event) {
+              if (isDragging) {
+                const x = event.clientX - offsetX;
+                const y = event.clientY - offsetY;
+                draggableElement.style.transform = `translate(${x}px, ${y}px)`;
+              }
+            });
+          
+            document.addEventListener('mouseup', function () {
+              if (isDragging) {
+                isDragging = false;
+                draggableElement.style.cursor = 'grab';
+              }
+            });
+          </script>
 </body>
 </html>

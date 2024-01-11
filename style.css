@@ -625,4 +625,21 @@ button:hover {
         background-color: black;
         border-radius: 10px;
       }
+
+      #dragContainer {
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+  
+      #draggableElement {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(162, 101, 220);
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+        cursor: grab;
+      }
       
